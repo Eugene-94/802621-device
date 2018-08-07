@@ -1,6 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Евгений Кайгородов](https://up.htmlacademy.ru/htmlcss/22/user/802621).
+* Наставник: [Андрей Островский](https://up.htmlacademy.ru/htmlcss/22/user/198062).
 
 ---
 
