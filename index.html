@@ -11,12 +11,12 @@
             </a>
             <!-- search form will be here -->
             <nav>
-                <ul class="user-navigation">
+                <ul class="user-nav">
                     <li>Войти</li>
                     <li>Сравнить</li>
                     <li>Корзина</li>
                 </ul>
-                <ul>
+                <ul class="main-nav">
                     <li><a href="#">Каталог товаров</a></li>
                     <li><a href="#">Доставка</a></li>
                     <li><a href="#">Гарантия</a></li>
@@ -26,10 +26,10 @@
         </header>
 
         <main>
-            <h1>Интернет-магазин гаджетов Device</h1>
+            <h1 class="invisible-title">Интернет-магазин гаджетов Device</h1>
 
             <section class="slider">
-                <h2>Слайдер с товарами</h2>
+                <h2 class="invisible-title">Слайдер с товарами</h2>
 
                 <div class="slides slide-1">
                     <h3>Делай селфи, как Бен Стиллер</h3>
@@ -94,7 +94,7 @@
             </section>
 
             <section class="goods-categories">
-                <h2>Наши товары</h2>
+                <h2 class="invisible-title">Наши товары</h2>
                 <ul>
                     <li>
                         <a href="#">
@@ -135,7 +135,7 @@
                 </ul>
             </section>
             <section class="info">
-                <h2>Информационный раздел</h2>
+                <h2 class="invisible-title">Информационный раздел</h2>
                 <input type="radio" id="delivery">
                  <label for="delivery">Доставка</label>
                  <input type="radio" id="warranty">
@@ -165,7 +165,7 @@
             </section>
 
             <section class="partners">
-                <h2>Наши партнеры</h2>
+                <h2 class="invisible-title">Наши партнеры</h2>
                 <img src="#" alt="dji" width="" height="">
                 <img src="#" alt="sp gadgets" width="" height="">
                 <img src="#" alt="GoPro" width="" height="">
@@ -191,5 +191,58 @@
                 <a href="#">Напишите нам</a>
             </section>
         </main>
+
+        <footer>
+            <a class="main-footer-logo">
+              <img src="img/index-logo.svg" width="" height="" alt="Логотип магазина Device">
+            </a>
+            <nav>
+                <ul class="user-nav">
+                    <li>Войти</li>
+                    <li>Сравнить</li>
+                    <li>Корзина</li>
+                </ul>
+
+                <ul class="main-nav">
+                    <li><a href="#">Каталог товаров</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="adress">г. Москва, ул. Строителей, 15</div>
+            <div class="phone">Тел.: +7 (495) 495-95-95</div>
+
+            <div class="social">
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+
+            <div class="copyright">
+                <img src="#" alt="copyright" width="" height="">
+            </div>
+        </footer>
+
+        <!-- pop ups -->
+        <section class="modal modal-write-us">
+            <h2 class="invisible-title">Напишите нам</h2>
+            <p>Ваше имя:</p>
+            <!-- name form will be here -->
+            <p>Ваш e-mail:</p>
+            <!-- mail form will be here -->
+            <p>Текст письма:</p>
+            <!-- message form will be here -->
+            <button class="submit">Отправить</button>
+            <button class="close-modal"></button>
+        </section>
+
+        <section class="modal modal-map">
+            <h2 class="invisible-title">Как до нас добраться</h2>
+            <button class="close-modal"></button>
+        </section>
     </body>
 </html>
