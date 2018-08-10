@@ -2,24 +2,39 @@
 
 @font-face {
     font-family: 'OpenSans Light';
-    src: url('opensanslight.woff') format('woff'),
-         url('OpenSans-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+    src: local('OpenSans Light'),
+        url('opensanslight.woff2') format('woff2'),
+        url('opensanslight.woff') format('woff'),
+        url('OpenSans-Light.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'OpenSans Regular';
-    src: url('opensans.woff') format('woff'),
-         url('OpenSans-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    src: local('OpenSans Regular'),
+        url('opensans.woff') format('woff'),
+        url('opensans.woff2') format('woff2'),
+        url('OpenSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Gilroy Light';
-    src: url('gilroylight.woff') format('woff'),
-         url('Gilroylight.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+    src: local('Gilroy Light'),
+        url('gilroylight.woff') format('woff'),
+        url('gilroylight.woff2') format('woff2'),
+        url('Gilroylight.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Gilroy ExtraBold';
-    src: url('gilroyextrabold.woff') format('woff'),
-         url('Gilroyextrabold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+    src: local('Gilroy ExtraBold'),
+        url('gilroyextrabold.woff') format('woff'),
+        url('Gilroyextrabold.ttf') format('truetype');
 }

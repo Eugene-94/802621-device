@@ -9,15 +9,28 @@
             <a class="main-header-logo">
               <img src="img/index-logo.svg" width="" height="" alt="Логотип магазина Device">
             </a>
-            <!-- search form will be here -->
-            <nav>
+            <div class="user-menu">
+                <!-- search form will be here -->
                 <ul class="user-nav">
                     <li>Войти</li>
                     <li>Сравнить</li>
                     <li>Корзина</li>
                 </ul>
+            </div>
+            <nav>
+                <input type="radio" id="catalog">
+                <label for="catalog">Каталог товаров</label>
+
+                <ul class="catalog-dropdown">
+                    <li><a href="#">Виртуальная реальность</a></li>
+                    <li><a href="#">Фитнес-браслеты</a></li>
+                    <li><a href="#">Квадрокоптеры</a></li>
+                    <li><a href="#">Моноподы для селфи</a></li>
+                    <li><a href="#">Умные часы</a></li>
+                    <li><a href="#">Экшн-камеры</a></li>
+                </ul>
+
                 <ul class="main-nav">
-                    <li><a href="#">Каталог товаров</a></li>
                     <li><a href="#">Доставка</a></li>
                     <li><a href="#">Гарантия</a></li>
                     <li><a href="#">Контакты</a></li>
@@ -93,41 +106,41 @@
                 </div>
             </section>
 
-            <section class="goods-categories">
+            <section class="our-goods">
                 <h2 class="invisible-title">Наши товары</h2>
-                <ul>
-                    <li>
-                        <a href="#">
+                <ul class="goods-list">
+                    <li class="goods-item">
+                        <a href="#" class="goods-link">
                             <img src="#" alt="Виртуальная реальность">
                             <h3>Виртуальная реальность</h3>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="goods-item">
+                        <a href="#" class="goods-link">
                             <img src="#" alt="Моноподы для селфи">
                             <h3>Моноподы для селфи</h3>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="goods-item">
+                        <a href="#" class="goods-link">
                             <img src="#" alt="Экшн-камеры">
                             <h3>Экшн-камеры</h3>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="goods-item">
+                        <a href="#" class="goods-link">
                             <img src="#" alt="Фитнес-браслеты">
                             <h3>Фитнес-браслеты</h3>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="goods-item">
+                        <a href="#" class="goods-link">
                             <img src="#" alt="Умные часы">
                             <h3>Умные часы</h3>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="goods-item">
+                        <a href="#" class="goods-link">
                             <img src="#" alt="Квадрокоптеры">
                             <h3>Квадрокоптеры</h3>
                         </a>
@@ -139,24 +152,24 @@
                 <input type="radio" id="delivery">
                  <label for="delivery">Доставка</label>
                  <input type="radio" id="warranty">
-                 <label for="">Гарантия</label>
+                 <label for="warranty">Гарантия</label>
                  <input type="radio" id="credit">
-                 <label for="">Кредит</label>
+                 <label for="credit">Кредит</label>
 
-                 <div class="delivery">
+                 <div class="info-items info-1">
                      <h3>Доставка</h3>
                      <p>
                          Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
                          поднимая его на ваш этаж.
                      </p>
                  </div>
-                 <div class="warranty">
+                 <div class="info-items info-2">
                      <h3>Гарантия</h3>
                      <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
                         Товар, не дом, конечно же.
                     </p>
                  </div>
-                 <div class="credit">
+                 <div class="info-items info-3">
                      <h3>Кредит</h3>
                      <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
                         условия кредита. Выгодные для нашего банка, разумеется.
@@ -166,10 +179,18 @@
 
             <section class="partners">
                 <h2 class="invisible-title">Наши партнеры</h2>
-                <img src="#" alt="dji" width="" height="">
-                <img src="#" alt="sp gadgets" width="" height="">
-                <img src="#" alt="GoPro" width="" height="">
-                <img src="#" alt="Vive" width="" height="">
+                <a href="#">
+                    <img src="#" alt="dji" width="" height="">
+                </a>
+                <a href="#">
+                    <img src="#" alt="sp gadgets" width="" height="">
+                </a>
+                <a href="#">
+                    <img src="#" alt="GoPro" width="" height="">
+                </a>
+                <a href="#">
+                    <img src="#" alt="Vive" width="" height="">
+                </a>
             </section>
 
             <section class="about-us">
@@ -187,41 +208,37 @@
             <section class="contacts">
                 <h2>Контакты</h2>
                 <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                <span class="map"></span>
+                <img src="#" alt="Мы на карте" width="" height="">
                 <a href="#">Напишите нам</a>
             </section>
         </main>
 
         <footer>
+            <!-- 1st column -->
             <a class="main-footer-logo">
               <img src="img/index-logo.svg" width="" height="" alt="Логотип магазина Device">
             </a>
-            <nav>
-                <ul class="user-nav">
-                    <li>Войти</li>
-                    <li>Сравнить</li>
-                    <li>Корзина</li>
-                </ul>
-
-                <ul class="main-nav">
-                    <li><a href="#">Каталог товаров</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Гарантия</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
-
             <div class="adress">г. Москва, ул. Строителей, 15</div>
-            <div class="phone">Тел.: +7 (495) 495-95-95</div>
 
-            <div class="social">
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
-            </div>
+            <!-- 2nd column -->
+            <ul class="main-nav">
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="social">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
 
+            <!-- 3rd column -->
+            <ul class="user-nav">
+                <li>Войти</li>
+                <li>Сравнить</li>
+                <li>Корзина</li>
+            </ul>
+            <div class="phone"><a>Тел.: +7 (495) 495-95-95</a></div>
             <div class="copyright">
                 <img src="#" alt="copyright" width="" height="">
             </div>
