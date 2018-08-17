@@ -10,6 +10,9 @@
               <img src="img/logo.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
             <div class="user-menu">
+                <form action="https://echo.htmlacademy.ru" method="post">
+                    <input type="search" name="search" placeholder="Поиск по сайту">
+                </form>
                 <!-- search form will be here -->
                 <ul class="user-nav">
                     <li>Войти</li>
@@ -249,14 +252,19 @@
         <!-- pop ups -->
         <section class="modal modal-write-us">
             <h2 class="invisible-title">Напишите нам</h2>
-            <p>Ваше имя:</p>
-            <!-- name form will be here -->
-            <p>Ваш e-mail:</p>
-            <!-- mail form will be here -->
-            <p>Текст письма:</p>
-            <!-- message form will be here -->
-            <button class="submit">Отправить</button>
-            <button class="close-modal"></button>
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <label for="username">Ваше имя:</label>
+                <input type="text" name="username" id="username" placeholder="Имя Фамилия">
+
+                <label for="email">Ваш e-mail:</label>
+                <input type="email" name="email" id="email" placeholder="email@example.ru">
+
+                <label for="message">Текст письма:</label>
+                <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+
+                <button class="submit">Отправить</button>
+                <button class="close-modal"></button>
+            </form>
         </section>
 
         <section class="modal modal-map">
