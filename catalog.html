@@ -10,14 +10,21 @@
               <img src="img/logo.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
             <div class="user-menu">
-                <form action="https://echo.htmlacademy.ru" method="post">
+                <form action="https://echo.htmlacademy.ru" method="get">
                     <input type="search" name="search" placeholder="Поиск по сайту">
+                    <input type="submit" value="Поиск">
                 </form>
                 <!-- search form will be here -->
                 <ul class="user-nav">
-                    <li><a href="#" class="login-link">Войти</a></li>
-                    <li><a href="#" class="compare-link">Сравнить</a></li>
-                    <li><a href="#" class="cart-link">Корзина</a></li>
+                    <li class="user-nav-item">
+                        <a href="#" class="login-link">Войти</a>
+                    </li>
+                    <li class="user-nav-item">
+                        <a href="#" class="compare-link">Сравнить</a>
+                    </li>
+                    <li class="user-nav-item">
+                        <a href="#" class="cart-link">Корзина</a>
+                    </li>
                 </ul>
             </div>
             <nav>
@@ -50,32 +57,32 @@
 
             <section class="filter">
                 <h2 class="invisible-title">Фильтр товаров</h2>
-                <form action="https://echo.htmlacademy.ru" method="post" class="filter-form">
+                <form action="https://echo.htmlacademy.ru" method="get" class="filter-form">
                     <fieldset class="range-cost">
                         <legend>Стоимость</legend>
                         <!-- range form will be here -->
                     </fieldset>
 
-                    <fieldset class="select-color">
+                    <fieldset>
                         <legend>Цвет</legend>
-                        <label for="select-black">Черный</label>
-                        <input type="checkbox" name="color" value="black" id="select-black">
-                        <label for="select-white">Белый</label>
-                        <input type="checkbox" name="color" value="white" id="select-white">
-                        <label for="select-blue">Синий</label>
-                        <input type="checkbox" name="color" value="blue" id="select-blue">
-                        <label for="select-red">Красный</label>
-                        <input type="checkbox" name="color" value="red" id="select-red">
-                        <label for="select-pink">Розовый</label>
-                        <input type="checkbox" name="color" value="pink" id="select-pink">
+                        <label for="select-black" class="filter-label">Черный</label>
+                        <input type="checkbox" name="color" value="black" id="select-black" class="select-color">
+                        <label for="select-white" class="filter-label">Белый</label>
+                        <input type="checkbox" name="color" value="white" id="select-white" class="select-color">
+                        <label for="select-blue" class="filter-label">Синий</label>
+                        <input type="checkbox" name="color" value="blue" id="select-blue" class="select-color">
+                        <label for="select-red" class="filter-label">Красный</label>
+                        <input type="checkbox" name="color" value="red" id="select-red" class="select-color">
+                        <label for="select-pink" class="filter-label">Розовый</label>
+                        <input type="checkbox" name="color" value="pink" id="select-pink" class="select-color">
                     </fieldset>
 
-                    <fieldset class="is-bluetooth">
+                    <fieldset>
                         <legend>Bluetooth</legend>
-                        <label for="true">Есть</label>
-                        <input type="radio" name="isBluetooth" value="true" id="true">
-                        <label for="">Нет</label>
-                        <input type="radio" name="isBluetooth" value="false" id="false">
+                        <label for="true" class="filter-label">Есть</label>
+                        <input type="radio" name="isBluetooth" value="true" id="true" class="is-bluetooth">
+                        <label for="false" class="filter-label">Нет</label>
+                        <input type="radio" name="isBluetooth" value="false" id="false" class="is-bluetooth">
                     </fieldset>
 
                     <a href="#" class="get-filtered">Показать</a>

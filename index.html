@@ -10,14 +10,21 @@
               <img src="img/logo.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
             <div class="user-menu">
-                <form action="https://echo.htmlacademy.ru" method="post">
+                <form action="https://echo.htmlacademy.ru" method="get">
                     <input type="search" name="search" placeholder="Поиск по сайту">
+                    <input type="submit" value="Поиск">
                 </form>
                 <!-- search form will be here -->
                 <ul class="user-nav">
-                    <li><a href="#" class="login-link">Войти</a></li>
-                    <li><a href="#" class="compare-link">Сравнить</a></li>
-                    <li><a href="#" class="cart-link">Корзина</a></li>
+                    <li class="user-nav-item">
+                        <a href="#" class="login-link">Войти</a>
+                    </li>
+                    <li class="user-nav-item">
+                        <a href="#" class="compare-link">Сравнить</a>
+                    </li>
+                    <li class="user-nav-item">
+                        <a href="#" class="cart-link">Корзина</a>
+                    </li>
                 </ul>
             </div>
             <nav>
@@ -262,9 +269,9 @@
                 <label for="message">Текст письма:</label>
                 <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
 
-                <button class="submit">Отправить</button>
-                <button class="close-modal"></button>
+                <input type="submit" value="Отправить">
             </form>
+            <button class="close-modal"></button>
         </section>
 
         <section class="modal modal-map">
