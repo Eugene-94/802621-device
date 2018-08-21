@@ -3,47 +3,51 @@
     <head>
         <meta charset="utf-8">
         <title>Девайс</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-header">
             <a class="main-header-logo">
               <img src="img/logo.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
-            <div class="user-menu">
-                <form action="https://echo.htmlacademy.ru" method="get">
-                    <input type="search" name="search" placeholder="Поиск по сайту">
-                    <button class="btn-search" type="submit">Найти</button>
-                </form>
-                <!-- search form will be here -->
-                <ul class="user-nav">
-                    <li class="user-nav-item">
-                        <a href="#" class="login-link">Войти</a>
-                    </li>
-                    <li class="user-nav-item">
-                        <a href="#" class="compare-link">Сравнить</a>
-                    </li>
-                    <li class="user-nav-item">
-                        <a href="#" class="cart-link">Корзина</a>
-                    </li>
-                </ul>
+            <div class="header-wrapper">
+                <div class="user-menu">
+                    <form action="https://echo.htmlacademy.ru" method="get">
+                        <input type="search" name="search" placeholder="Поиск по сайту">
+                        <button class="btn-search" type="submit">Найти</button>
+                    </form>
+                    <!-- search form will be here -->
+                    <ul class="user-nav">
+                        <li class="user-nav-item">
+                            <a href="#" class="login-link">Войти</a>
+                        </li>
+                        <li class="user-nav-item">
+                            <a href="#" class="compare-link">Сравнить</a>
+                        </li>
+                        <li class="user-nav-item">
+                            <a href="#" class="cart-link">Корзина</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav>
+                    <ul class="main-nav">
+                        <li>Каталог товаров
+                            <ul class="catalog-dropdown">
+                                <li><a href="#">Виртуальная реальность</a></li>
+                                <li><a href="#">Фитнес-браслеты</a></li>
+                                <li><a href="#">Квадрокоптеры</a></li>
+                                <li><a href="#">Моноподы для селфи</a></li>
+                                <li><a href="#">Умные часы</a></li>
+                                <li><a href="#">Экшн-камеры</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul class="main-nav">
-                    <li>Каталог товаров
-                        <ul class="catalog-dropdown">
-                            <li><a href="#">Виртуальная реальность</a></li>
-                            <li><a href="#">Фитнес-браслеты</a></li>
-                            <li><a href="#">Квадрокоптеры</a></li>
-                            <li><a href="#">Моноподы для селфи</a></li>
-                            <li><a href="#">Умные часы</a></li>
-                            <li><a href="#">Экшн-камеры</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Гарантия</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
         </header>
 
         <main>
@@ -58,7 +62,7 @@
                         Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                     </p>
                     <span>01</span>
-                    <a href="#">Подробнее</a>
+                    <a href="#" class="btn-link">Подробнее</a>
                     <table>
                         <tr>
                             <td>8,5 м</td><td>5 кг</td><td>Карбон</td>
@@ -75,7 +79,7 @@
                         не пропускать занятия и соблюдать диету.
                     </p>
                     <span>02</span>
-                    <a href="#">Подробнее</a>
+                    <a href="#" class="btn-link">Подробнее</a>
                     <table>
                         <tr>
                             <td>48 часов</td>
@@ -92,7 +96,7 @@
                         не пропускать занятия и соблюдать диету.
                     </p>
                     <span>03</span>
-                    <a href="#">Подробнее</a>
+                    <a href="#" class="btn-link">Подробнее</a>
                     <table>
                         <tr>
                             <td>800 метров</td><td>50 метров</td>
@@ -119,37 +123,49 @@
                 <ul class="goods-list">
                     <li class="goods-item">
                         <a href="#" class="goods-link">
-                            <img src="img/popular-1.svg" alt="Виртуальная реальность">
+                            <div class="img-wrapper">
+                                <img src="img/popular-1.svg" alt="Виртуальная реальность">
+                            </div>
                             <h3>Виртуальная реальность</h3>
                         </a>
                     </li>
                     <li class="goods-item">
                         <a href="#" class="goods-link">
-                            <img src="img/popular-2.svg" alt="Моноподы для селфи">
+                            <div class="img-wrapper">
+                                <img src="img/popular-2.svg" alt="Моноподы для селфи">
+                            </div>
                             <h3>Моноподы для селфи</h3>
                         </a>
                     </li>
                     <li class="goods-item">
                         <a href="#" class="goods-link">
-                            <img src="img/popular-3.svg" alt="Экшн-камеры">
+                            <div class="img-wrapper">
+                                <img src="img/popular-3.svg" alt="Экшн-камеры">
+                            </div>
                             <h3>Экшн-камеры</h3>
                         </a>
                     </li>
                     <li class="goods-item">
                         <a href="#" class="goods-link">
-                            <img src="img/popular-4.svg" alt="Фитнес-браслеты">
+                            <div class="img-wrapper">
+                                <img src="img/popular-4.svg" alt="Фитнес-браслеты">
+                            </div>
                             <h3>Фитнес-браслеты</h3>
                         </a>
                     </li>
                     <li class="goods-item">
                         <a href="#" class="goods-link">
-                            <img src="img/popular-5.svg" alt="Умные часы">
+                            <div class="img-wrapper">
+                                <img src="img/popular-5.svg" alt="Умные часы">
+                            </div>
                             <h3>Умные часы</h3>
                         </a>
                     </li>
                     <li class="goods-item">
                         <a href="#" class="goods-link">
-                            <img src="img/popular-6.svg" alt="Квадрокоптеры">
+                            <div class="img-wrapper">
+                                <img src="img/popular-6.svg" alt="Квадрокоптеры">
+                            </div>
                             <h3>Квадрокоптеры</h3>
                         </a>
                     </li>
@@ -185,8 +201,8 @@
                  </div>
             </section>
 
-            <section class="partners">
-                <h2 class="invisible-title">Наши партнеры</h2>
+            <section class="brands">
+                <h2 class="invisible-title">Бренды в магазине Device</h2>
                 <a href="#">
                     <img src="img/logo-1.png" alt="dji" width="260" height="100">
                 </a>
@@ -210,7 +226,7 @@
                     <li>Автотрейдинг</li>
                     <li>ЖелДорЭкспедиция</li>
                 </ul>
-                <a href="#">Подробнее о нас</a>
+                <a href="#" class="btn-link">Подробнее о нас</a>
             </section>
 
             <section class="contacts">
@@ -219,19 +235,19 @@
                 <div class="map">
                     <img src="img/map.jpg" alt="Мы на карте" width="560" height="222">
                 </div>
-                <a href="#">Напишите нам</a>
+                <a href="#" class="btn-link">Напишите нам</a>
             </section>
         </main>
 
         <footer>
             <!-- 1st column -->
             <a class="main-footer-logo">
-              <img src="img/logo.png" width="163" height="36" alt="Логотип магазина Device">
+              <img src="img/logo-footer.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
-            <div class="adress">г. Москва, ул. Строителей, 15</div>
+            <p class="adress">г. Москва, ул. Строителей, 15</p>
 
             <!-- 2nd column -->
-            <ul class="main-nav">
+            <ul class="main-nav main-nav-footer">
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Гарантия</a></li>
                 <li><a href="#">Контакты</a></li>
@@ -243,7 +259,7 @@
             </ul>
 
             <!-- 3rd column -->
-            <ul class="user-nav">
+            <ul class="user-nav user-nav-footer">
                 <li><a href="#" class="login-link">Войти</a></li>
                 <li><a href="#" class="compare-link">Сравнить</a></li>
                 <li><a href="#" class="cart-link">Корзина</a></li>
@@ -251,7 +267,7 @@
             <a href="tel:+74954959595" class="phone">Тел.: +7 (495) 495-95-95</a>
             <div class="copyright">
                 <a href="https://htmlacademy.ru/intensive/htmlcss">
-                    <img src="img/logo-html.svg" alt="copyright">
+                    <img src="img/logo-html.png" width="27" height="35" alt="Лого HTML Academy">
                 </a>
             </div>
         </footer>
@@ -269,7 +285,7 @@
                 <label for="message">Текст письма:</label>
                 <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
 
-                <input type="submit" value="Отправить">
+                <input type="submit" value="Отправить" class="btn-link">
             </form>
             <button class="close-modal" type="button">Закрыть окно</button>
         </section>

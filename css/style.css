@@ -5,8 +5,8 @@
     font-style: normal;
     font-weight: 300;
     src: local('OpenSans'),
-        url('opensanslight.woff2') format('woff2'),
-        url('opensanslight.woff') format('woff');
+        url('../fonts/opensanslight.woff2') format('woff2'),
+        url('../fonts/opensanslight.woff') format('woff');
 }
 
 @font-face {
@@ -14,8 +14,8 @@
     font-style: normal;
     font-weight: 400;
     src: local('OpenSans'),
-        url('opensans.woff2') format('woff2'),
-        url('opensans.woff') format('woff');
+        url('../fonts/opensans.woff2') format('woff2'),
+        url('../fonts/opensans.woff') format('woff');
 }
 
 @font-face {
@@ -23,8 +23,8 @@
     font-style: normal;
     font-weight: 300;
     src: local('Gilroy'),
-        url('gilroylight.woff2') format('woff2'),
-        url('gilroylight.woff') format('woff');
+        url('../fonts/gilroylight.woff2') format('woff2'),
+        url('../fonts/gilroylight.woff') format('woff');
 }
 
 @font-face {
@@ -32,6 +32,451 @@
     font-style: normal;
     font-weight: 800;
     src: local('Gilroy'),
-        url('gilroyextrabold.woff2') format('woff2'),
-        url('gilroyextrabold.woff') format('woff');
+        url('../fonts/gilroyextrabold.woff2') format('woff2'),
+        url('../fonts/gilroyextrabold.woff') format('woff');
+}
+
+/* Colors
+
+paragraphs text: #464646;
+header background: #f7e296;
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #464646;
+
+    background-color: white;
+}
+
+.invisible-title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.btn-link {
+    display: block;
+    width: 220px;
+    height: 40px;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 40px;
+    color: black;
+    text-align: center;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-link:hover {
+    background: #f0c52e;
+}
+
+.btn-link:active {
+    opacity: .5;
+}
+
+.btn-search {
+    width: 85px;
+    height: 45px;
+
+    background-color: #f7e296;
+    border: 2px solid black;
+}
+
+.user-nav li,
+.main-nav li {
+   list-style: none;
+}
+
+.user-nav a {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+.main-nav li:first-child {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: black;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main-nav a {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: black;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header-wrapper {
+    background-color: #f7e296;
+}
+
+.slider h3 {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 56px;
+    color: black;
+}
+
+.slider td {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 48px;
+    color: black;
+}
+
+.slider th {
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.slider a {
+    width: 220px;
+    background: linear-gradient(white 16px, #f0c52e 16px, #f0c52e 24px, white 24px);
+}
+
+
+/* ----- goods categories section styles ----- */
+
+.goods-list {
+    list-style: none;
+    padding: 0;
+}
+
+.goods-list a {
+    display: inline-block;
+    width: 160px;
+    position: relative;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    color: black;
+
+    text-decoration: none;
+
+}
+
+.img-wrapper {
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.img-wrapper img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.goods-list a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 160px;
+
+    background-color: #f0c52e;
+    opacity: .5;
+}
+
+.goods-list a:hover::before {
+    opacity: 1;
+}
+
+.goods-list a:active {
+    opacity: .5;
+}
+
+/* ----- info section styles -----*/
+
+.info {
+    background-color: #e5e5e5;
+}
+
+.info label {
+    display: block;
+    width: 160px;
+    height: 40px;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 40px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+
+    background: linear-gradient(#e5e5e5 16px, #f0c52e 16px, #f0c52e 24px, #e5e5e5 24px);
+}
+
+.info h3 {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 48px;
+    color: black;
+}
+
+/* ----- about us section styles ----- */
+
+.about-us h2 {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 48px;
+    color: black;
+}
+
+
+.about-us li {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 40px;
+    color: black;
+}
+
+.about-us a {
+    width: 260px;
+    background: linear-gradient(white 16px, #f0c52e 16px, #f0c52e 24px, white 24px);
+}
+
+
+/* ----- contacts section styles -----*/
+
+.contacts h2 {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 48px;
+    color: black;
+}
+
+.contacts a {
+    width: 260px;
+    background: linear-gradient(white 16px, #f0c52e 16px, #f0c52e 24px, white 24px);
+}
+
+/* ----- footer section styles ----- */
+
+footer {
+    background-color: #464646;
+}
+
+footer p {
+    color: white;
+}
+
+.main-nav-footer a,
+.user-nav-footer a {
+    color: white;
+}
+
+.social a {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: white;
+}
+
+.phone {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: white;
+}
+
+/* ----- modal windows styles ----- */
+
+.modal-write-us label {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: black;
+}
+
+.modal-write-us .btn-link {
+    width: 200px;
+    background: linear-gradient(white 16px, #f0c52e 16px, #f0c52e 24px, white 24px);
+    border: none;
+}
+
+.modal-write-us .btn-link:hover {
+    background: #f0c52e;
+}
+
+.modal-write-us .btn-link:active {
+    opacity: .5;
+}
+
+
+/* ----- catalog page styles ----- */
+.breadcrumbs {
+    padding: 0;
+
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: black;
+
+    list-style: none;
+}
+
+.breadcrumbs a {;
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: black;
+
+    text-decoration: none;
+}
+
+/* ------ filter section styles ----- */
+
+.filter {
+    background-color: #eeeeee;
+}
+
+.filter legend {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: black;
+}
+
+.filter label {
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 40px;
+    color: black;
+}
+
+.filter button {
+    border: none;
+    background: linear-gradient(#eeeeee 16px, #f0c52e 16px, #f0c52e 24px, #eeeeee 24px);
+}
+
+/* ----- sorting section styles ----- */
+
+.goods-sort {
+    list-style: none;
+}
+
+.goods-sort a {
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    color: black;
+
+    text-decoration: none;
+}
+
+/* ----- catalog section styles ----- */
+
+.list-items {
+    list-style: none;
+}
+
+.item-link {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: black;
+
+    text-decoration: none;
+}
+
+.price {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: black;
+}
+
+.to-cart-link {
+    width: 200px;
+    background: linear-gradient(#eeeeee 16px, #f0c52e 16px, #f0c52e 24px, #eeeeee 24px);
+}
+
+.compare-link {
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 36px;
+    color: black;
+
+    text-decoration: none;
+}
+
+/* pagination section styles ----- */
+
+.pagination {
+    padding: 0;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    color: black;
+
+    list-style: none;
+}
+
+.pagination a {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    color: black;
+
+    text-decoration: none;
+    text-transform: uppercase;
 }
