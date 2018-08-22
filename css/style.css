@@ -57,18 +57,17 @@ body {
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
-    color: #000;
+    color: #000000;
 
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 a {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-
     text-decoration: none;
+}
+
+.link {
+    color: inherit;
 }
 
 .visually-hidden {
@@ -87,9 +86,8 @@ a {
     font-size: 18px;
     font-weight: 800;
     line-height: 40px;
-    color: black;
+    color: inherit;
     text-align: center;
-
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -110,7 +108,7 @@ a {
     line-height: 45px;
 
     background-color: #f7e296;
-    border: 2px solid #000;;
+    border: 2px solid #000000;
 }
 
 .user-nav li,
@@ -118,13 +116,14 @@ a {
    list-style: none;
 }
 
+/* Переделал момент с .user-nav a */
+
 .main-nav a {
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    color: #000;
-
+    color: inherit;
     text-transform: uppercase;
 }
 
@@ -137,7 +136,6 @@ a {
     font-size: 47px;
     font-weight: 800;
     line-height: 56px;
-    color: #fff;
 }
 
 .slider td {
@@ -145,7 +143,6 @@ a {
     font-size: 36px;
     font-weight: 300;
     line-height: 48px;
-    color: #000;
 }
 
 .slider th {
@@ -156,9 +153,9 @@ a {
 
 .slider a {
     width: 220px;
-    background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
+    background: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 24px, #ffffff 24px);
 }
-
+/* не совсем понял момент с дублированием здесь. Это ссылка-кнопка, по макету у них разные ширины и фоны, т.е. как раз варьируются два этих параметра
 
 /* ----- goods categories section styles ----- */
 
@@ -176,7 +173,7 @@ a {
     font-size: 18px;
     font-weight: 300;
     line-height: 24px;
-    color: #000;
+    color: inherit;
 }
 
 /*
@@ -220,27 +217,27 @@ a {
     background-position: center;
 }
 
-.goods-item:nth-child(1) a::after {
+.virtual-reality::after {
     background-image: url("../img/popular-1.svg");
 }
 
-.goods-item:nth-child(2) a::after {
+.monopods::after {
     background-image: url("../img/popular-2.svg");
 }
 
-.goods-item:nth-child(3) a::after {
+.action-cameras::after {
     background-image: url("../img/popular-3.svg");
 }
 
-.goods-item:nth-child(4) a::after {
+.fintess-bands::after {
     background-image: url("../img/popular-4.svg");
 }
 
-.goods-item:nth-child(5) a::after {
+.smart-watches::after {
     background-image: url("../img/popular-5.svg");
 }
 
-.goods-item:nth-child(6) a::after {
+.quadrocopters::after {
     background-image: url("../img/popular-6.svg");
 }
 
@@ -267,7 +264,6 @@ a {
     font-size: 18px;
     font-weight: 800;
     line-height: 40px;
-    color: black;
     text-align: center;
     text-transform: uppercase;
 
@@ -279,7 +275,6 @@ a {
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
-    color: #000;
 }
 
 /* ----- about us section styles ----- */
@@ -289,7 +284,6 @@ a {
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
-    color: #000;
 }
 
 
@@ -298,12 +292,11 @@ a {
     font-size: 16px;
     font-weight: 800;
     line-height: 40px;
-    color: #000;
 }
 
 .about-us a {
     width: 260px;
-    background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
+    background: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 24px, #ffffff 24px);
 }
 
 
@@ -314,12 +307,11 @@ a {
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
-    color: #000;
 }
 
 .contacts a {
     width: 260px;
-    background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
+    background: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 24px, #ffffff 24px);
 }
 
 /* ----- footer section styles ----- */
@@ -329,12 +321,12 @@ footer {
 }
 
 footer p {
-    color: #fff;
+    color: #ffffff;
 }
 
 .main-nav-footer a,
 .user-nav-footer a {
-    color: #fff;
+    color: #ffffff;
 }
 
 .social {
@@ -342,11 +334,11 @@ footer p {
 }
 
 .social a {
-    color: #fff;
+    color: #ffffff;
 }
 
 .phone {
-    color: #fff;
+    color: #ffffff;
 }
 
 /* ----- modal windows styles ----- */
@@ -356,11 +348,12 @@ footer p {
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    color: #000;
+    color: #000000;
 }
 
 .modal-write-us .btn-link {
     width: 200px;
+
     background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
     border: none;
 }
@@ -384,11 +377,8 @@ footer p {
 
     list-style: none;
 }
+/* убрал дублирование с breadcrumbs
 
-.breadcrumbs a {
-    font-size: 14px;
-    line-height: 24px;
-}
 
 /* ------ filter section styles ----- */
 
@@ -436,6 +426,8 @@ footer p {
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
+
+    color: inherit;
 }
 
 .price {
@@ -447,6 +439,7 @@ footer p {
 
 .to-cart-link {
     width: 200px;
+
     background: linear-gradient(#eeeeee 16px, #f0c52e 16px, #f0c52e 24px, #eeeeee 24px);
 }
 
@@ -454,6 +447,8 @@ footer p {
     font-size: 13px;
     font-weight: 300;
     line-height: 36px;
+
+    color: inherit;
 }
 
 /* pagination section styles ----- */
@@ -465,15 +460,7 @@ footer p {
     font-size: 16px;
     font-weight: 800;
     line-height: 24px;
+    text-transform: uppercase;
 
     list-style: none;
-}
-
-.pagination a {
-    font-family: Gilroy, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-
-    text-transform: uppercase;
 }
