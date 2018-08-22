@@ -43,6 +43,8 @@ header background: #f7e296;
 
 */
 
+/* ----- common styles ----- */
+
 * {
     box-sizing: border-box;
 }
@@ -55,12 +57,21 @@ body {
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
-    color: #464646;
+    color: #000;
 
-    background-color: white;
+    background-color: #fff;
 }
 
-.invisible-title {
+a {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+
+    text-decoration: none;
+}
+
+.visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -71,7 +82,6 @@ body {
 .btn-link {
     display: block;
     width: 220px;
-    height: 40px;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
@@ -89,15 +99,18 @@ body {
 }
 
 .btn-link:active {
-    opacity: .5;
+    opacity: 0.5;
 }
+
+/* ----- header section styles ----- */
 
 .btn-search {
     width: 85px;
-    height: 45px;
+
+    line-height: 45px;
 
     background-color: #f7e296;
-    border: 2px solid black;
+    border: 2px solid #000;;
 }
 
 .user-nav li,
@@ -105,33 +118,13 @@ body {
    list-style: none;
 }
 
-.user-nav a {
-    text-decoration: none;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-}
-
-.main-nav li:first-child {
-    font-family: Gilroy, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 24px;
-    color: black;
-
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
 .main-nav a {
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    color: black;
+    color: #000;
 
-    text-decoration: none;
     text-transform: uppercase;
 }
 
@@ -144,7 +137,7 @@ body {
     font-size: 47px;
     font-weight: 800;
     line-height: 56px;
-    color: black;
+    color: #fff;
 }
 
 .slider td {
@@ -152,11 +145,10 @@ body {
     font-size: 36px;
     font-weight: 300;
     line-height: 48px;
-    color: black;
+    color: #000;
 }
 
 .slider th {
-    font-family: OpenSans, Arial, sans-serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 20px;
@@ -164,7 +156,7 @@ body {
 
 .slider a {
     width: 220px;
-    background: linear-gradient(white 16px, #f0c52e 16px, #f0c52e 24px, white 24px);
+    background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
 }
 
 
@@ -184,12 +176,10 @@ body {
     font-size: 18px;
     font-weight: 300;
     line-height: 24px;
-    color: black;
-
-    text-decoration: none;
-
+    color: #000;
 }
 
+/*
 .img-wrapper {
     position: relative;
     width: 160px;
@@ -205,16 +195,53 @@ body {
     margin: auto;
 }
 
+*/
+
 .goods-list a::before {
     content: "";
     display: block;
-    position: absolute;
-    top: 0;
     width: 160px;
     height: 160px;
 
     background-color: #f0c52e;
-    opacity: .5;
+    opacity: 0.5;
+}
+
+.goods-item a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+
+    display: block;
+    width: 160px;
+    height: 160px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.goods-item:nth-child(1) a::after {
+    background-image: url("../img/popular-1.svg");
+}
+
+.goods-item:nth-child(2) a::after {
+    background-image: url("../img/popular-2.svg");
+}
+
+.goods-item:nth-child(3) a::after {
+    background-image: url("../img/popular-3.svg");
+}
+
+.goods-item:nth-child(4) a::after {
+    background-image: url("../img/popular-4.svg");
+}
+
+.goods-item:nth-child(5) a::after {
+    background-image: url("../img/popular-5.svg");
+}
+
+.goods-item:nth-child(6) a::after {
+    background-image: url("../img/popular-6.svg");
 }
 
 .goods-list a:hover::before {
@@ -222,7 +249,7 @@ body {
 }
 
 .goods-list a:active {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 /* ----- info section styles -----*/
@@ -252,7 +279,7 @@ body {
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
-    color: black;
+    color: #000;
 }
 
 /* ----- about us section styles ----- */
@@ -262,7 +289,7 @@ body {
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
-    color: black;
+    color: #000;
 }
 
 
@@ -271,12 +298,12 @@ body {
     font-size: 16px;
     font-weight: 800;
     line-height: 40px;
-    color: black;
+    color: #000;
 }
 
 .about-us a {
     width: 260px;
-    background: linear-gradient(white 16px, #f0c52e 16px, #f0c52e 24px, white 24px);
+    background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
 }
 
 
@@ -287,12 +314,12 @@ body {
     font-size: 47px;
     font-weight: 800;
     line-height: 48px;
-    color: black;
+    color: #000;
 }
 
 .contacts a {
     width: 260px;
-    background: linear-gradient(white 16px, #f0c52e 16px, #f0c52e 24px, white 24px);
+    background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
 }
 
 /* ----- footer section styles ----- */
@@ -302,28 +329,24 @@ footer {
 }
 
 footer p {
-    color: white;
+    color: #fff;
 }
 
 .main-nav-footer a,
 .user-nav-footer a {
-    color: white;
+    color: #fff;
+}
+
+.social {
+    list-style: none;
 }
 
 .social a {
-    text-decoration: none;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: white;
+    color: #fff;
 }
 
 .phone {
-    text-decoration: none;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: white;
+    color: #fff;
 }
 
 /* ----- modal windows styles ----- */
@@ -333,12 +356,12 @@ footer p {
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    color: black;
+    color: #000;
 }
 
 .modal-write-us .btn-link {
     width: 200px;
-    background: linear-gradient(white 16px, #f0c52e 16px, #f0c52e 24px, white 24px);
+    background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
     border: none;
 }
 
@@ -347,7 +370,7 @@ footer p {
 }
 
 .modal-write-us .btn-link:active {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 
@@ -355,23 +378,16 @@ footer p {
 .breadcrumbs {
     padding: 0;
 
-    font-family: OpenSans, Arial, sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
-    color: black;
 
     list-style: none;
 }
 
-.breadcrumbs a {;
-    font-family: OpenSans, Arial, sans-serif;
+.breadcrumbs a {
     font-size: 14px;
-    font-weight: 300;
     line-height: 24px;
-    color: black;
-
-    text-decoration: none;
 }
 
 /* ------ filter section styles ----- */
@@ -385,15 +401,12 @@ footer p {
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    color: black;
 }
 
 .filter label {
-    font-family: OpenSans, Arial, sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 40px;
-    color: black;
 }
 
 .filter button {
@@ -408,13 +421,8 @@ footer p {
 }
 
 .goods-sort a {
-    font-family: OpenSans, Arial, sans-serif;
     font-size: 14px;
-    font-weight: 300;
     line-height: 18px;
-    color: black;
-
-    text-decoration: none;
 }
 
 /* ----- catalog section styles ----- */
@@ -428,9 +436,6 @@ footer p {
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    color: black;
-
-    text-decoration: none;
 }
 
 .price {
@@ -438,7 +443,6 @@ footer p {
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
-    color: black;
 }
 
 .to-cart-link {
@@ -447,13 +451,9 @@ footer p {
 }
 
 .compare-link {
-    font-family: OpenSans, Arial, sans-serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 36px;
-    color: black;
-
-    text-decoration: none;
 }
 
 /* pagination section styles ----- */
@@ -465,7 +465,6 @@ footer p {
     font-size: 16px;
     font-weight: 800;
     line-height: 24px;
-    color: black;
 
     list-style: none;
 }
@@ -475,8 +474,6 @@ footer p {
     font-size: 16px;
     font-weight: 800;
     line-height: 24px;
-    color: black;
 
-    text-decoration: none;
     text-transform: uppercase;
 }

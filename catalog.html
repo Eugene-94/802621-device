@@ -14,7 +14,8 @@
             <div class="header-wrapper">
                 <div class="user-menu">
                     <form action="https://echo.htmlacademy.ru" method="get">
-                        <input type="search" name="search" placeholder="Поиск по сайту">
+                        <label class="visually-hidden" for="search-input">Найти на сайте</label>
+                        <input type="search" name="search" id="search-input" placeholder="Поиск по сайту">
                         <button class="btn-search" type="submit">Найти</button>
                     </form>
                     <!-- search form will be here -->
@@ -32,7 +33,7 @@
                 </div>
                 <nav>
                     <ul class="main-nav">
-                        <li>Каталог товаров
+                        <li><a href="#">Каталог товаров</a>
                             <ul class="catalog-dropdown">
                                 <li><a href="#">Виртуальная реальность</a></li>
                                 <li><a href="#">Фитнес-браслеты</a></li>
@@ -51,7 +52,7 @@
         </header>
 
         <main>
-            <h1 class="invisible-title">Моноподы для селфи</h1>
+            <h1 class="visually-hidden">Моноподы для селфи</h1>
 
             <ul class="breadcrumbs">
                 <li><a href="index.html">Главная</a></li>
@@ -60,7 +61,7 @@
             </ul>
 
             <section class="filter">
-                <h2 class="invisible-title">Фильтр товаров</h2>
+                <h2 class="visually-hidden">Фильтр товаров</h2>
                 <form action="https://echo.htmlacademy.ru" method="get" class="filter-form">
                     <fieldset class="filter-section">
                         <legend>Стоимость</legend>
@@ -101,7 +102,7 @@
             </ul>
 
             <section class="catalog">
-                <h2 class="invisible-title">Список моноподов</h2>
+                <h2 class="visually-hidden">Список моноподов</h2>
                 <ul class="list-items">
                     <li>
                         <div class="item">
@@ -188,7 +189,7 @@
             <a href="index.html" class="main-header-logo">
               <img src="img/logo-footer.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
-            <div class="adress">г. Москва, ул. Строителей, 15</div>
+            <p class="adress">г. Москва, ул. Строителей, 15</p>
 
             <!-- 2nd column -->
             <ul class="main-nav main-nav-footer">
@@ -211,7 +212,7 @@
             <a href="tel:+74954959595" class="phone">Тел.: +7 (495) 495-95-95</a>
             <div class="copyright">
                 <a href="https://htmlacademy.ru/intensive/htmlcss">
-                    <img src="img/logo-html.png" width="27" height="35" alt="Лого HTML Academy">
+                    <img src="img/logo-html.svg" alt="Лого HTML Academy">
                 </a>
             </div>
         </footer>
