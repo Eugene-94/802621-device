@@ -66,21 +66,25 @@ a {
     text-decoration: none;
 }
 
-.link {
+.user-nav-link,
+.crumbs-link,
+.sort-link,
+.pagination-link {
     color: inherit;
 }
 
 .visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 .btn-link {
     display: block;
     width: 220px;
+    border: none;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
@@ -90,30 +94,46 @@ a {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+
+    background-color: inherit;
+    background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 }
+/*изменилась группировка свойств. Насколько я помню вопрос заключался в принципе разбиения. Text-decoration и text-transform теперь в типографике*/
 
 .btn-link:hover {
-    background: #f0c52e;
+    background-color: #f0c52e;
 }
 
 .btn-link:active {
     opacity: 0.5;
 }
 
+.title {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+}
+
 /* ----- header section styles ----- */
 
 .btn-search {
     width: 85px;
+    border: 2px solid #000000;
 
     line-height: 45px;
 
     background-color: #f7e296;
-    border: 2px solid #000000;
 }
 
-.user-nav li,
-.main-nav li {
-   list-style: none;
+.user-nav,
+.main-nav {
+    padding: 0;
+
+    list-style: none;
+}
+
+.catalog-dropdown {
+    list-style: none;
 }
 
 /* Переделал момент с .user-nav a */
@@ -132,9 +152,6 @@ a {
 }
 
 .slider h3 {
-    font-family: Gilroy, Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
     line-height: 56px;
 }
 
@@ -150,21 +167,17 @@ a {
     font-weight: 300;
     line-height: 20px;
 }
-
-.slider a {
-    width: 220px;
-    background: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 24px, #ffffff 24px);
-}
-/* не совсем понял момент с дублированием здесь. Это ссылка-кнопка, по макету у них разные ширины и фоны, т.е. как раз варьируются два этих параметра
+/* Понял косяк, slider a больше не дублирую.
 
 /* ----- goods categories section styles ----- */
 
 .goods-list {
-    list-style: none;
     padding: 0;
+
+    list-style: none;
 }
 
-.goods-list a {
+.goods-link {
     display: inline-block;
     width: 160px;
     position: relative;
@@ -194,7 +207,7 @@ a {
 
 */
 
-.goods-list a::before {
+.goods-link::before {
     content: "";
     display: block;
     width: 160px;
@@ -204,7 +217,7 @@ a {
     opacity: 0.5;
 }
 
-.goods-item a::after {
+.goods-link::after {
     content: "";
     position: absolute;
     top: 0;
@@ -241,11 +254,11 @@ a {
     background-image: url("../img/popular-6.svg");
 }
 
-.goods-list a:hover::before {
+.goods-link:hover::before {
     opacity: 1;
 }
 
-.goods-list a:active {
+.goods-link:active {
     opacity: 0.5;
 }
 
@@ -258,7 +271,6 @@ a {
 .info label {
     display: block;
     width: 160px;
-    height: 40px;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
@@ -266,23 +278,15 @@ a {
     line-height: 40px;
     text-align: center;
     text-transform: uppercase;
-
-    background: linear-gradient(#e5e5e5 16px, #f0c52e 16px, #f0c52e 24px, #e5e5e5 24px);
 }
 
 .info h3 {
-    font-family: Gilroy, Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
     line-height: 48px;
 }
 
 /* ----- about us section styles ----- */
 
 .about-us h2 {
-    font-family: Gilroy, Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
     line-height: 48px;
 }
 
@@ -294,33 +298,21 @@ a {
     line-height: 40px;
 }
 
-.about-us a {
-    width: 260px;
-    background: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 24px, #ffffff 24px);
-}
 
 
 /* ----- contacts section styles -----*/
 
 .contacts h2 {
-    font-family: Gilroy, Arial, sans-serif;
-    font-size: 47px;
-    font-weight: 800;
     line-height: 48px;
-}
-
-.contacts a {
-    width: 260px;
-    background: linear-gradient(#ffffff 16px, #f0c52e 16px, #f0c52e 24px, #ffffff 24px);
 }
 
 /* ----- footer section styles ----- */
 
-footer {
+.page-footer {
     background-color: #464646;
 }
 
-footer p {
+.page-footer p {
     color: #ffffff;
 }
 
@@ -330,6 +322,8 @@ footer p {
 }
 
 .social {
+    padding: 0;
+
     list-style: none;
 }
 
@@ -348,24 +342,7 @@ footer p {
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    color: #000000;
 }
-
-.modal-write-us .btn-link {
-    width: 200px;
-
-    background: linear-gradient(#fff 16px, #f0c52e 16px, #f0c52e 24px, #fff 24px);
-    border: none;
-}
-
-.modal-write-us .btn-link:hover {
-    background: #f0c52e;
-}
-
-.modal-write-us .btn-link:active {
-    opacity: 0.5;
-}
-
 
 /* ----- catalog page styles ----- */
 .breadcrumbs {
@@ -399,18 +376,15 @@ footer p {
     line-height: 40px;
 }
 
-.filter button {
-    border: none;
-    background: linear-gradient(#eeeeee 16px, #f0c52e 16px, #f0c52e 24px, #eeeeee 24px);
-}
-
 /* ----- sorting section styles ----- */
 
 .goods-sort {
+    padding: 0;
+
     list-style: none;
 }
 
-.goods-sort a {
+.sort-link {
     font-size: 14px;
     line-height: 18px;
 }
@@ -418,6 +392,8 @@ footer p {
 /* ----- catalog section styles ----- */
 
 .list-items {
+    padding: 0;
+
     list-style: none;
 }
 
@@ -437,11 +413,6 @@ footer p {
     line-height: 24px;
 }
 
-.to-cart-link {
-    width: 200px;
-
-    background: linear-gradient(#eeeeee 16px, #f0c52e 16px, #f0c52e 24px, #eeeeee 24px);
-}
 
 .compare-link {
     font-size: 13px;
