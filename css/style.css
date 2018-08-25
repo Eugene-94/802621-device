@@ -81,6 +81,12 @@ a {
     margin: -1px;
 }
 
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .btn-link {
     display: block;
     width: 220px;
@@ -115,6 +121,9 @@ a {
 }
 
 /* ----- header section styles ----- */
+.main-header {
+    padding-top: 20px;
+}
 
 .btn-search {
     width: 85px;
@@ -127,12 +136,24 @@ a {
 
 .user-nav,
 .main-nav {
+    display: flex;
     padding: 0;
 
     list-style: none;
 }
 
+.user-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav li {
+    margin-right: 15px;
+}
+
 .catalog-dropdown {
+    display: none;
+
     list-style: none;
 }
 
@@ -148,10 +169,59 @@ a {
 }
 
 .header-wrapper {
+    padding-bottom: 160px;
+
     background-color: #f7e296;
 }
 
+.slider {
+    position: relative;
+
+    margin-bottom: 100px;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide-2,
+.slide-3 {
+    display: none;
+}
+
+.slider-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    order: 2;
+
+    padding: 20px;
+    padding-top: 0;
+    padding-right: 80px;
+}
+
+.slider-wrapper span {
+    position: absolute;
+    top: -125px;
+    right: 60px;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 179px;
+    font-weight: 800;
+    line-height: 179px;
+    color: #ffffff;
+}
+
+.slides img {
+    order: 1;
+
+    margin-right: 100px;
+}
+
 .slider h3 {
+    margin: 0;
+
     line-height: 56px;
 }
 
@@ -160,18 +230,32 @@ a {
     font-size: 36px;
     font-weight: 300;
     line-height: 48px;
+    text-align: left;
 }
 
 .slider th {
     font-size: 13px;
     font-weight: 300;
     line-height: 20px;
+    text-align: left;
+}
+
+.selectors {
+    position: absolute;
+    right: 120px;
+    top: 49%;
+}
+
+.selectors label {
+    display: none;
 }
 /* Понял косяк, slider a больше не дублирую.
 
 /* ----- goods categories section styles ----- */
 
 .goods-list {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
 
     list-style: none;
@@ -265,7 +349,13 @@ a {
 /* ----- info section styles -----*/
 
 .info {
+    margin-bottom: 90px;
+
     background-color: #e5e5e5;
+}
+
+.info-wrapper {
+    display: flex;
 }
 
 .info label {
@@ -280,11 +370,40 @@ a {
     text-transform: uppercase;
 }
 
+.info input {
+    display: none;
+}
+
 .info h3 {
     line-height: 48px;
 }
 
+/* ----- brands section styles ----- */
+.brands {
+    margin-bottom: 90px;
+}
+
+.brands .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brands a {
+    opacity: 0.2;
+}
+
+.brands a:hover {
+    opacity: 1;
+}
+
 /* ----- about us section styles ----- */
+
+.about-us-contacts-wrapper{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 80px;
+}
 
 .about-us h2 {
     line-height: 48px;
@@ -312,6 +431,16 @@ a {
     background-color: #464646;
 }
 
+.page-footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .page-footer p {
     color: #ffffff;
 }
@@ -336,6 +465,25 @@ a {
 }
 
 /* ----- modal windows styles ----- */
+
+.modal-write-us {
+    width: 960px;
+    margin: 0 auto;
+}
+.modal-container {
+    width: 840px;
+    margin: 0 auto;
+    padding: 90px 40px 70px 40px;
+}
+.write-us-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-mail {
+    display: flex;
+    justify-content: space-between;
+}
 
 .modal-write-us label {
     font-family: Gilroy, Arial, sans-serif;
