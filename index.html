@@ -6,8 +6,8 @@
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
-    <body class="index">
-        <header class="container main-header">
+    <body>
+        <header class="container main-header index-main-header">
             <a class="main-header-logo">
               <img src="img/logo.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
@@ -76,13 +76,17 @@
             <section class="container slider">
                 <h2 class="visually-hidden">Слайдер с товарами</h2>
 
-                <div class="slides slide-1">
+                <div class="slides slide-1 active">
+                    <div class="slider-image">
+                        <img src="img/slider-1.png" alt="Селфи-палка" width="384" height="486">
+                    </div>
+
                     <div class="slider-wrapper">
                         <h3 class="title">Делай селфи, <br> как Бен Стиллер</h3>
                         <p>Самая длинная палка для селфи доступна в нашем магазине.
                             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                         </p>
-                        <span>01</span>
+                        <span class="slide-number">01</span>
                         <a href="#" class="btn-link">Подробнее</a>
                         <table>
                             <tr>
@@ -93,15 +97,18 @@
                             </tr>
                         </table>
                     </div>
-                    <img src="img/slider-1.png" alt="Селфи-палка" width="384" height="486">
                 </div>
                 <div class="slides slide-2">
+                    <div class="slider-image">
+                        <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
+                    </div>
+
                     <div class="slider-wrapper">
                         <h3 class="title">Худеем <br> правильно!</h3>
                         <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
                             не пропускать занятия и соблюдать диету.
                         </p>
-                        <span>02</span>
+                        <span class="slide-number">02</span>
                         <a href="#" class="btn-link">Подробнее</a>
                         <table>
                             <tr>
@@ -112,15 +119,18 @@
                             </tr>
                         </table>
                     </div>
-                    <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
                 </div>
                 <div class="slides slide-3">
+                    <div class="slider-image">
+                        <img src="img/slider-3.png" alt="Дрон" width="526" height="334">
+                    </div>
+
                     <div class="slider-wrapper">
                         <h3 class="title">Порхает как бабочка, <br> жалит как пчела!</h3>
                         <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
                             не пропускать занятия и соблюдать диету.
                         </p>
-                        <span>03</span>
+                        <span class="slide-number">03</span>
                         <a href="#" class="btn-link">Подробнее</a>
                         <table>
                             <tr>
@@ -131,10 +141,9 @@
                             </tr>
                         </table>
                     </div>
-                    <img src="img/slider-3.png" alt="Дрон" width="526" height="334">
                 </div>
 
-                <div class="selectors">
+                <div class="toggles">
                     <input type="radio" id="slide-1" checked>
                     <label for="slide-1">Радио-кнопка переключения на слайд 1</label>
                     <input type="radio" id="slide-2">
@@ -213,16 +222,16 @@
                 <div class="info-wrapper container">
                     <div class="info-selectors-wrapper">
                         <h2 class="visually-hidden">Информационный раздел</h2>
-                        <input type="radio" name="info-selector" id="delivery">
-                        <label for="delivery">Доставка</label>
+                        <input type="radio" name="info-selector" id="delivery" checked>
+                        <label for="delivery" class="delivery-label">Доставка</label>
                         <input type="radio" name="info-selector" id="warranty">
-                        <label for="warranty">Гарантия</label>
+                        <label for="warranty" class="warranty-label">Гарантия</label>
                         <input type="radio" name="info-selector" id="credit">
-                        <label for="credit">Кредит</label>
+                        <label for="credit" class="credit-label">Кредит</label>
                     </div>
 
                     <div class="info-description-wrapper">
-                         <div class="info-items info-1">
+                         <div class="info-items info-1 active-info">
                              <h3 class="title">Доставка</h3>
                              <p>
                                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
@@ -249,16 +258,20 @@
                 <div class="container">
                     <h2 class="visually-hidden">Бренды в магазине Device</h2>
                     <a href="#">
-                        <img src="img/logo-1.png" alt="dji" width="260" height="100">
+                        <img src="img/logo-1-gray.png" alt="dji" width="260" height="100">
+                        <img class="colorful" src="img/logo-1.png" alt="dji" width="260" height="100">
                     </a>
                     <a href="#">
-                        <img src="img/logo-2.png" alt="sp gadgets" width="260" height="100">
+                        <img src="img/logo-2-gray.png" alt="sp gadgets" width="260" height="100">
+                        <img class="colorful" src="img/logo-2.png" alt="sp gadgets" width="260" height="100">
                     </a>
                     <a href="#">
-                        <img src="img/logo-3.png" alt="GoPro" width="260" height="100">
+                        <img src="img/logo-3-gray.png" alt="GoPro" width="260" height="100">
+                        <img class="colorful" src="img/logo-3.png" alt="GoPro" width="260" height="100">
                     </a>
                     <a href="#">
-                        <img src="img/logo-4.png" alt="Vive" width="260" height="100">
+                        <img src="img/logo-4-gray.png" alt="Vive" width="260" height="100">
+                        <img class="colorful" src="img/logo-4.png" alt="Vive" width="260" height="100">
                     </a>
                 </div>
             </section>
@@ -361,7 +374,7 @@
                     <label for="message">Текст письма:</label>
                     <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
 
-                    <input type="submit" value="Отправить" class="btn-link">
+                    <button type="submit" class="btn-link">Отправить</button>
                 </form>
                 <button class="close-modal" type="button">Закрыть окно</button>
             </div>

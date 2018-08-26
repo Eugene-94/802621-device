@@ -6,8 +6,8 @@
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
-    <body class="catalog-page">
-        <header class="container main-header">
+    <body>
+        <header class="container main-header catalog-main-header">
             <a href="index.html" class="main-header-logo">
               <img src="img/logo.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
@@ -18,7 +18,6 @@
                         <input type="search" name="search" id="search-input" placeholder="Поиск по сайту">
                         <button class="btn-search" type="submit">Найти</button>
                     </form>
-                    <!-- search form will be here -->
                     <ul class="user-nav">
                         <li class="user-nav-item">
                             <a href="#" class="user-nav-link">Войти</a>
@@ -76,7 +75,7 @@
 
                 <ul class="breadcrumbs">
                     <li>
-                        <a href="index.html" class="crumbs-link">Главная</a>
+                        <a href="index.html" class="crumbs-link">Главная</a> <!-- не понял вопроса. crumbs-link потому что ссылка вложена в breadcrumbs -->
                     </li>
                     <li>
                         <a href="#" class="crumbs-link">Каталог товаров</a>
@@ -130,7 +129,7 @@
 
                 <div class="goods-wrapper">
                     <div class="sort-wrapper">
-                        <span>Сортировка:</span>
+                        <span class="sort-header">Сортировка:</span>
                         <ul class="goods-sort">
                             <li>
                                 <a class="sort-link" href="#">По цене</a>

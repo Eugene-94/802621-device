@@ -122,10 +122,26 @@ a {
 
 /* ----- header section styles ----- */
 .main-header {
-    padding-top: 20px;
+    position: relative;
+
+    padding-top: 35px;
+}
+
+.main-header input[type="search"] {
+    border: none;
+    margin-top: 18px;
+
+    background-color: inherit;
+}
+
+.main-header-logo {
+    position: absolute;
+    top: 20px;
+    left: 80px;
 }
 
 .btn-search {
+    display: none;
     width: 85px;
     border: 2px solid #000000;
 
@@ -138,13 +154,37 @@ a {
 .main-nav {
     display: flex;
     padding: 0;
-
     list-style: none;
+}
+
+.main-nav {
+    justify-content: space-between;
+}
+
+.main-nav li:nth-of-type(1) {
+    flex-grow: 1;
+}
+
+.main-nav li:nth-of-type(2) {
+    margin-right: 50px;
+}
+
+.main-nav li:nth-of-type(3) {
+    margin-right: 115px;
 }
 
 .user-menu {
     display: flex;
     justify-content: space-between;
+    margin-top: 35px;
+}
+
+.user-nav-item:nth-of-type(1) {
+    margin-right: 220px;
+}
+
+.user-nav-item:nth-of-type(2) {
+    margin-right: 60px;
 }
 
 .main-nav li {
@@ -169,11 +209,19 @@ a {
 }
 
 .header-wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+    border-top: 1px solid transparent;
+
     background-color: #f7e296;
 }
 
-.index .header-wrapper {
+.index-main-header .header-wrapper {
     padding-bottom: 160px;
+}
+
+.catalog-main-header .header-wrapper {
+    padding-bottom: 45px;
 }
 
 .slider {
@@ -183,12 +231,11 @@ a {
 }
 
 .slides {
-    display: flex;
+    display: none;
 }
 
-.slide-2,
-.slide-3 {
-    display: none;
+.active {
+    display: flex;
 }
 
 .slider-wrapper {
@@ -196,14 +243,11 @@ a {
 
     display: flex;
     flex-direction: column;
-    order: 2;
 
-    padding: 20px;
-    padding-top: 0;
-    padding-right: 80px;
+    padding: 20px 100px;
 }
 
-.slider-wrapper span {
+.slide-number {
     position: absolute;
     top: -125px;
     right: 60px;
@@ -215,10 +259,8 @@ a {
     color: #ffffff;
 }
 
-.slides img {
-    order: 1;
-
-    margin-right: 100px;
+.slider-image {
+    padding-left: 100px;
 }
 
 .slider h3 {
@@ -242,18 +284,21 @@ a {
     text-align: left;
 }
 
-.selectors {
+.toggles {
     position: absolute;
     right: 120px;
     top: 49%;
 }
 
-.selectors label {
+.toggles label {
     display: none;
 }
 /* Понял косяк, slider a больше не дублирую.
 
 /* ----- goods categories section styles ----- */
+.categories {
+    margin-bottom: 190px;
+}
 
 .goods-list {
     display: flex;
@@ -356,6 +401,26 @@ a {
     background-color: #e5e5e5;
 }
 
+.info-description-wrapper {
+    position: relative;
+}
+
+.info-items {
+    position: relative;
+    top: -75px;
+
+    display: none;
+    padding-left: 120px;
+}
+
+.active-info {
+    display: block;
+}
+
+.info-items p {
+    width: 460px;
+}
+
 .info-wrapper {
     display: flex;
 }
@@ -363,6 +428,7 @@ a {
 .info label {
     display: block;
     width: 160px;
+    margin-bottom: 25px;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
@@ -370,6 +436,23 @@ a {
     line-height: 40px;
     text-align: center;
     text-transform: uppercase;
+
+    background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
+
+    cursor: pointer;
+}
+
+.info label:hover {
+    background-color: #f0c52e;
+}
+
+#delivery:checked ~ label[for="delivery"],
+#warranty:checked ~ label[for="warranty"],
+#credit:checked ~ label[for="credit"] {
+    color: #f0c52e;
+
+    background-color: #000000;
+    background-image: none;
 }
 
 .info input {
@@ -379,6 +462,14 @@ a {
 .info h3 {
     line-height: 48px;
 }
+
+.info-selectors-wrapper {
+    position: relative;
+    top: -18px;
+
+    padding-right: 120px;
+}
+
 
 /* ----- brands section styles ----- */
 .brands {
@@ -391,12 +482,26 @@ a {
 }
 
 .brands a {
+    position: relative;
     opacity: 0.2;
 }
 
+.colorful {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
 .brands a:hover {
     opacity: 1;
 }
+
+.brands a:hover .colorful {
+    display: block;
+}
+
+
 
 /* ----- about us section styles ----- */
 
@@ -419,8 +524,6 @@ a {
     line-height: 40px;
 }
 
-
-
 /* ----- contacts section styles -----*/
 
 .contacts h2 {
@@ -436,11 +539,6 @@ a {
 .page-footer .container {
     display: flex;
     justify-content: space-between;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
 }
 
 .page-footer p {
@@ -477,10 +575,6 @@ a {
     margin: 0 auto;
     padding: 90px 40px 70px 40px;
 }
-.write-us-form {
-    display: flex;
-    flex-direction: column;
-}
 
 .name-mail {
     display: flex;
@@ -516,6 +610,7 @@ a {
 /* ------ filter section styles ----- */
 
 .filter {
+    padding-top: 10px;
     padding-right: 65px;
 }
 
@@ -531,6 +626,8 @@ a {
 }
 
 .filter h2 {
+    margin-bottom: 100px;
+
     font-family: Gilroy, Arial, sans-serif;
     font-size: 16px;
     font-weight: 800;
@@ -553,6 +650,8 @@ a {
 }
 
 .filter-section {
+    margin-bottom: 40px;
+    padding: 0;
     border: none;
 }
 
@@ -572,13 +671,21 @@ a {
 
 .sort-wrapper {
     display: flex;
+    align-items: baseline;
     padding-left: 72px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.sort-wrapper span {
+.sort-header {
     margin-right: 50px;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .goods-sort {
@@ -611,18 +718,14 @@ a {
     margin-right: 40px;
 }
 
-.item-description {
-    display: flex;
-    flex-direction: column;
-}
-
 .item-info {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .item-title {
-    order: 1;
+    width: 260px;
     margin: 0;
     padding: 0;
 }
@@ -637,7 +740,6 @@ a {
 }
 
 .price {
-    order: 2;
     margin: 0;
     padding: 0;
 
@@ -658,35 +760,21 @@ a {
 
 .item-hover {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 40%;
+    left: 80px;
 
     display: none;
     margin: auto;
+
+    text-align: center;
 }
-
-
-
-.to-cart-link {
-    position: absolute;
-    top: 40%;
-    left: 80px;
-}
-
-.compare-link {
-    position: absolute;
-    top: 50%;
-    left: 120px;
-}
-
+/* переделал кнопки */
 .item:hover .item-hover {
     display: block;
 }
 
 .item:hover .item-image {
-    opacity: 0.7;
+    opacity: 0.3; /* Взял в макете во вкладке "эффекты" */
 }
 
 /* pagination section styles ----- */
