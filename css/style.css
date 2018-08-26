@@ -169,9 +169,11 @@ a {
 }
 
 .header-wrapper {
-    padding-bottom: 160px;
-
     background-color: #f7e296;
+}
+
+.index .header-wrapper {
+    padding-bottom: 160px;
 }
 
 .slider {
@@ -493,7 +495,9 @@ a {
 }
 
 /* ----- catalog page styles ----- */
+
 .breadcrumbs {
+    display: flex;
     padding: 0;
 
     font-size: 14px;
@@ -502,13 +506,37 @@ a {
 
     list-style: none;
 }
-/* убрал дублирование с breadcrumbs
+/* убрал дублирование с breadcrumbs*/
+
+.breadcrumbs li {
+    margin-right: 40px;
+}
 
 
 /* ------ filter section styles ----- */
 
 .filter {
-    background-color: #eeeeee;
+    padding-right: 65px;
+}
+
+.filter-and-goods {
+    background-image:
+        linear-gradient(to right, #ebebeb 466px, transparent 466px),
+        linear-gradient(to bottom, #ebebeb 70px, transparent 70px);
+}
+
+.filter-and-goods .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter h2 {
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .filter legend {
@@ -524,10 +552,15 @@ a {
     line-height: 40px;
 }
 
+.filter-section {
+    border: none;
+}
+
 /* ----- sorting section styles ----- */
 
 .goods-sort {
     padding: 0;
+    margin: 0;
 
     list-style: none;
 }
@@ -537,12 +570,61 @@ a {
     line-height: 18px;
 }
 
+.sort-wrapper {
+    display: flex;
+    padding-left: 72px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sort-wrapper span {
+    margin-right: 50px;
+}
+
+.goods-sort {
+    display: flex;
+}
+
+.goods-sort li {
+    margin-right: 30px;
+}
+
 /* ----- catalog section styles ----- */
 
+.catalog {
+    padding-left: 72px;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
 .list-items {
+    display: flex;
+    flex-wrap: wrap;
     padding: 0;
 
     list-style: none;
+}
+
+.item {
+    position: relative;
+
+    margin-right: 40px;
+}
+
+.item-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-title {
+    order: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .item-link {
@@ -555,6 +637,10 @@ a {
 }
 
 .price {
+    order: 2;
+    margin: 0;
+    padding: 0;
+
     font-family: Gilroy, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -570,10 +656,47 @@ a {
     color: inherit;
 }
 
+.item-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    margin: auto;
+}
+
+
+
+.to-cart-link {
+    position: absolute;
+    top: 40%;
+    left: 80px;
+}
+
+.compare-link {
+    position: absolute;
+    top: 50%;
+    left: 120px;
+}
+
+.item:hover .item-hover {
+    display: block;
+}
+
+.item:hover .item-image {
+    opacity: 0.7;
+}
+
 /* pagination section styles ----- */
 
 .pagination {
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    margin-left: 70px;
+    margin-right: 40px;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 16px;
@@ -582,4 +705,18 @@ a {
     text-transform: uppercase;
 
     list-style: none;
+    background-color: #ebebeb;
+}
+
+.pages-count {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.pages-count li {
+    margin-right: 40px;
 }
