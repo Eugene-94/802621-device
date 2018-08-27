@@ -191,11 +191,6 @@ a {
     margin-right: 15px;
 }
 
-.catalog-dropdown {
-    display: none;
-
-    list-style: none;
-}
 
 /* Переделал момент с .user-nav a */
 
@@ -224,6 +219,73 @@ a {
     padding-bottom: 45px;
 }
 
+.catalog-dropdown {
+    position: absolute;
+    top: 30px;
+    left: -60px;
+
+    display: none;
+    width: 1160px;
+    padding: 0;
+    padding-left: 60px;
+
+    list-style: none;
+}
+
+.dropdown-menu .dropdown-link {
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 36px;
+    font-weight: 300;
+    text-transform: none;
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown-open-link:hover ~ .catalog-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 500;
+
+    padding-bottom: 67px;
+
+    background-color: #f7e296;
+}
+
+.dropdown-menu .dropdown-item:nth-of-type(1) {
+    flex-grow: 0;
+    margin: 0;
+    margin-right: 60px;
+}
+
+.dropdown-menu .dropdown-item:nth-of-type(2) {
+    flex-grow: 0;
+    margin: 0;
+    margin-right: 75px;
+}
+
+.dropdown-menu .dropdown-item:nth-of-type(3) {
+    flex-grow: 0;
+    margin: 0;
+    width: 45%;
+}
+
+.dropdown-menu .dropdown-item:nth-of-type(4) {
+    flex-grow: 0;
+    margin: 0;
+    margin-right: 80px;
+}
+
+.dropdown-menu .dropdown-item:nth-of-type(5) {
+    flex-grow: 0;
+    margin: 0;
+    width: 70%;
+}
+
+/* ----- slider styles section ----- */
+
 .slider {
     position: relative;
 
@@ -234,7 +296,7 @@ a {
     display: none;
 }
 
-.active {
+.active-slide {
     display: flex;
 }
 
@@ -481,25 +543,50 @@ a {
     justify-content: space-between;
 }
 
-.brands a {
+.brands-link {
     position: relative;
+
     opacity: 0.2;
 }
 
-.colorful {
+.brands-link:hover {
+    opacity: 1;
+}
+
+.brands-link::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
 
     display: none;
-}
-.brands a:hover {
-    opacity: 1;
+    width: 260px;
+    height: 100px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
-.brands a:hover .colorful {
+.brands-link:hover::before {
     display: block;
 }
+
+.dji-link:hover::before {
+    background-image: url("../img/logo-1.png");
+}
+
+.sp-gadgets-link:hover::before {
+    background-image: url("../img/logo-2.png");
+}
+
+.gopro-link:hover::before {
+    background-image: url("../img/logo-3.png");
+}
+
+.vive-link:hover::before {
+    background-image: url("../img/logo-4.png");
+}
+
 
 
 
@@ -764,10 +851,9 @@ a {
     left: 80px;
 
     display: none;
-    margin: auto;
 
     text-align: center;
-}
+} /* все сделал именно так, чтобы убрать ховерные элементы из потока и позиционировать их только внутри карточки товара */
 /* переделал кнопки */
 .item:hover .item-hover {
     display: block;
@@ -775,6 +861,8 @@ a {
 
 .item:hover .item-image {
     opacity: 0.3; /* Взял в макете во вкладке "эффекты" */
+
+    /*в макете отобразил слой с ховером, нажал на картинку. С разделе слоев для выбранного слоя зашел в эффекты. Там непрозрачность стоит 70 */
 }
 
 /* pagination section styles ----- */

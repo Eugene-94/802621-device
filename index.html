@@ -15,7 +15,7 @@
                 <div class="user-menu">
                     <form action="https://echo.htmlacademy.ru" method="get">
                         <label class="visually-hidden" for="search-input">Найти на сайте</label>
-                        <input type="search" name="search" id="search-input" placeholder="Поиск по сайту">
+                        <input id="search-input" type="search" name="search" placeholder="Поиск по сайту">
                         <button class="btn-search" type="submit">Найти</button>
                     </form>
                     <!-- search form will be here -->
@@ -33,26 +33,26 @@
                 </div>
                 <nav>
                     <ul class="main-nav">
-                        <li>
-                            <a href="#">Каталог товаров</a>
+                        <li class="dropdown-menu">
+                            <a class="dropdown-open-link" href="#">Каталог товаров</a>
                             <ul class="catalog-dropdown">
-                                <li>
-                                    <a href="#">Виртуальная реальность</a>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-link" href="#">Виртуальная реальность</a>
                                 </li>
-                                <li>
-                                    <a href="#">Фитнес-браслеты</a>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-link" href="#">Фитнес-браслеты</a>
                                 </li>
-                                <li>
-                                    <a href="#">Квадрокоптеры</a>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-link" href="#">Квадрокоптеры</a>
+                                </li><br>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-link" href="#">Моноподы для селфи</a>
                                 </li>
-                                <li>
-                                    <a href="#">Моноподы для селфи</a>
-                                </li>
-                                <li>
-                                    <a href="#">Умные часы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Экшн-камеры</a>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-link" href="#">Умные часы</a>
+                                </li><br>
+                                <li class="dropdown-item">
+                                    <a class="dropdown-link" href="#">Экшн-камеры</a>
                                 </li>
                             </ul>
                         </li>
@@ -76,7 +76,7 @@
             <section class="container slider">
                 <h2 class="visually-hidden">Слайдер с товарами</h2>
 
-                <div class="slides slide-1 active">
+                <div class="slides slide-1 active-slide">
                     <div class="slider-image">
                         <img src="img/slider-1.png" alt="Селфи-палка" width="384" height="486">
                     </div>
@@ -87,7 +87,7 @@
                             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                         </p>
                         <span class="slide-number">01</span>
-                        <a href="#" class="btn-link">Подробнее</a>
+                        <a class="btn-link" href="#">Подробнее</a>
                         <table>
                             <tr>
                                 <td>8,5 м</td><td>5 кг</td><td>Карбон</td>
@@ -109,7 +109,7 @@
                             не пропускать занятия и соблюдать диету.
                         </p>
                         <span class="slide-number">02</span>
-                        <a href="#" class="btn-link">Подробнее</a>
+                        <a class="btn-link" href="#">Подробнее</a>
                         <table>
                             <tr>
                                 <td>48 часов</td>
@@ -131,7 +131,7 @@
                             не пропускать занятия и соблюдать диету.
                         </p>
                         <span class="slide-number">03</span>
-                        <a href="#" class="btn-link">Подробнее</a>
+                        <a class="btn-link" href="#">Подробнее</a>
                         <table>
                             <tr>
                                 <td>800 метров</td><td>50 метров</td>
@@ -144,11 +144,11 @@
                 </div>
 
                 <div class="toggles">
-                    <input type="radio" id="slide-1" checked>
+                    <input id="slide-1" type="radio" checked>
                     <label for="slide-1">Радио-кнопка переключения на слайд 1</label>
-                    <input type="radio" id="slide-2">
+                    <input id="slide-2" type="radio">
                     <label for="slide-2">Радио-кнопка переключения на слайд 2</label>
-                    <input type="radio" id="slide-3">
+                    <input id="slide-3" type="radio">
                     <label for="slide-3">Радио-кнопка переключения на слайд 3</label>
                 </div>
             </section>
@@ -157,7 +157,7 @@
                 <h2 class="visually-hidden">Наши товары</h2>
                 <ul class="goods-list">
                     <li class="goods-item">
-                        <a href="#" class="goods-link virtual-reality">
+                        <a class="goods-link virtual-reality" href="#">
                             <!--
                             <div class="img-wrapper">
                                 <img src="img/popular-1.svg" alt="Виртуальная реальность">
@@ -167,7 +167,7 @@
                         </a>
                     </li>
                     <li class="goods-item">
-                        <a href="#" class="goods-link monopods">
+                        <a class="goods-link monopods" href="#">
                             <!--
                             <div class="img-wrapper">
                                 <img src="img/popular-2.svg" alt="Моноподы для селфи">
@@ -177,7 +177,7 @@
                         </a>
                     </li>
                     <li class="goods-item">
-                        <a href="#" class="goods-link action-cameras">
+                        <a class="goods-link action-cameras" href="#">
                             <!--
                             <div class="img-wrapper">
                                 <img src="img/popular-3.svg" alt="Экшн-камеры">
@@ -187,7 +187,7 @@
                         </a>
                     </li>
                     <li class="goods-item">
-                        <a href="#" class="goods-link fintess-bands">
+                        <a class="goods-link fintess-bands" href="#">
                             <!--
                             <div class="img-wrapper">
                                 <img src="img/popular-4.svg" alt="Фитнес-браслеты">
@@ -197,7 +197,7 @@
                         </a>
                     </li>
                     <li class="goods-item">
-                        <a href="#" class="goods-link smart-watches">
+                        <a class="goods-link smart-watches" href="#">
                             <!--
                             <div class="img-wrapper">
                                 <img src="img/popular-5.svg" alt="Умные часы">
@@ -207,7 +207,7 @@
                         </a>
                     </li>
                     <li class="goods-item">
-                        <a href="#" class="goods-link quadrocopters">
+                        <a class="goods-link quadrocopters" href="#">
                             <!--
                             <div class="img-wrapper">
                                 <img src="img/popular-6.svg" alt="Квадрокоптеры">
@@ -222,12 +222,12 @@
                 <div class="info-wrapper container">
                     <div class="info-selectors-wrapper">
                         <h2 class="visually-hidden">Информационный раздел</h2>
-                        <input type="radio" name="info-selector" id="delivery" checked>
-                        <label for="delivery" class="delivery-label">Доставка</label>
-                        <input type="radio" name="info-selector" id="warranty">
-                        <label for="warranty" class="warranty-label">Гарантия</label>
-                        <input type="radio" name="info-selector" id="credit">
-                        <label for="credit" class="credit-label">Кредит</label>
+                        <input id="delivery" type="radio" name="info-selector" checked>
+                        <label class="delivery-label" for="delivery">Доставка</label>
+                        <input id="warranty" type="radio" name="info-selector">
+                        <label class="warranty-label" for="warranty">Гарантия</label>
+                        <input id="credit" type="radio" name="info-selector">
+                        <label class="credit-label" for="credit">Кредит</label>
                     </div>
 
                     <div class="info-description-wrapper">
@@ -257,21 +257,17 @@
             <section class="brands">
                 <div class="container">
                     <h2 class="visually-hidden">Бренды в магазине Device</h2>
-                    <a href="#">
+                    <a class="brands-link dji-link" href="#">
                         <img src="img/logo-1-gray.png" alt="dji" width="260" height="100">
-                        <img class="colorful" src="img/logo-1.png" alt="dji" width="260" height="100">
                     </a>
-                    <a href="#">
+                    <a class="brands-link sp-gadgets-link" href="#">
                         <img src="img/logo-2-gray.png" alt="sp gadgets" width="260" height="100">
-                        <img class="colorful" src="img/logo-2.png" alt="sp gadgets" width="260" height="100">
                     </a>
-                    <a href="#">
+                    <a class="brands-link gopro-link" href="#">
                         <img src="img/logo-3-gray.png" alt="GoPro" width="260" height="100">
-                        <img class="colorful" src="img/logo-3.png" alt="GoPro" width="260" height="100">
                     </a>
-                    <a href="#">
+                    <a class="brands-link vive-link" href="#">
                         <img src="img/logo-4-gray.png" alt="Vive" width="260" height="100">
-                        <img class="colorful" src="img/logo-4.png" alt="Vive" width="260" height="100">
                     </a>
                 </div>
             </section>
@@ -286,7 +282,7 @@
                         <li>Автотрейдинг</li>
                         <li>ЖелДорЭкспедиция</li>
                     </ul>
-                    <a href="#" class="btn-link">Подробнее о нас</a>
+                    <a class="btn-link" href="#">Подробнее о нас</a>
                 </section>
 
                 <section class="contacts">
@@ -295,7 +291,7 @@
                     <div class="map">
                         <img src="img/map.jpg" alt="Мы на карте" width="560" height="222">
                     </div>
-                    <a href="#" class="btn-link">Напишите нам</a>
+                    <a class="btn-link" href="#">Напишите нам</a>
                 </section>
             </div>
         </main>
@@ -340,13 +336,13 @@
                 <div class="footer-column footer-right">
                     <ul class="user-nav user-nav-footer">
                         <li>
-                            <a href="#" class="login-link">Войти</a>
+                            <a class="login-link" href="#">Войти</a>
                         </li>
                         <li>
-                            <a href="#" class="compare-link">Сравнить</a>
+                            <a class="compare-link" href="#">Сравнить</a>
                         </li>
                         <li>
-                            <a href="#" class="cart-link">Корзина</a>
+                            <a class="cart-link" href="#">Корзина</a>
                         </li>
                     </ul>
                     <a href="tel:+74954959595" class="phone">Тел.: +7 (495) 495-95-95</a>
@@ -365,16 +361,16 @@
                 <form action="https://echo.htmlacademy.ru" method="post" class="write-us-form">
                     <div class="name-mail">
                         <label for="username">Ваше имя:</label>
-                        <input type="text" name="username" id="username" placeholder="Имя Фамилия">
+                        <input id="username" type="text" name="username" placeholder="Имя Фамилия">
 
                         <label for="email">Ваш e-mail:</label>
-                        <input type="email" name="email" id="email" placeholder="email@example.ru">
+                        <input id="email" type="email" name="email" placeholder="email@example.ru">
                     </div>
 
                     <label for="message">Текст письма:</label>
-                    <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+                    <textarea id="message" name="message" placeholder="В свободной форме"></textarea>
 
-                    <button type="submit" class="btn-link">Отправить</button>
+                    <button class="btn-link" type="submit">Отправить</button>
                 </form>
                 <button class="close-modal" type="button">Закрыть окно</button>
             </div>
