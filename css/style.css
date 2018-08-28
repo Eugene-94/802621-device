@@ -206,18 +206,12 @@ a {
 .header-wrapper {
     padding-left: 60px;
     padding-right: 60px;
+    padding-bottom: 160px;
     border-top: 1px solid transparent;
 
     background-color: #f7e296;
 }
 
-.index-main-header .header-wrapper {
-    padding-bottom: 160px;
-}
-
-.catalog-main-header .header-wrapper {
-    padding-bottom: 45px;
-}
 
 .catalog-dropdown {
     position: absolute;
@@ -289,14 +283,16 @@ a {
 .slider {
     position: relative;
 
-    margin-bottom: 100px;
+    margin-bottom: -20px;
 }
 
 .slides {
     display: none;
+    position: relative;
+    top: -55px;
 }
 
-.active-slide {
+.slides.active {
     display: flex;
 }
 
@@ -311,7 +307,7 @@ a {
 
 .slide-number {
     position: absolute;
-    top: -125px;
+    top: -70px;
     right: 60px;
 
     font-family: Gilroy, Arial, sans-serif;
@@ -322,6 +318,9 @@ a {
 }
 
 .slider-image {
+    position: relative;
+    top: -80px;
+
     padding-left: 100px;
 }
 
@@ -677,9 +676,24 @@ a {
 
 /* ----- catalog page styles ----- */
 
+.catalog-top {
+    position: relative;
+    top: -150px;
+
+    margin-bottom: -120px;
+
+    background-color: #ffffff;
+}
+
+.catalog-top .title {
+    padding-top: 50px;
+    padding-left: 60px;
+}
+
 .breadcrumbs {
     display: flex;
     padding: 0;
+    padding-left: 60px;
 
     font-size: 14px;
     font-weight: 300;
@@ -693,17 +707,25 @@ a {
     margin-right: 40px;
 }
 
+.breadcrumbs-link {
+    color: inherit;
+}
+
 
 /* ------ filter section styles ----- */
 
 .filter {
     padding-top: 10px;
-    padding-right: 65px;
+    padding-right: 24px;
+    margin-left: 0;
 }
 
 .filter-and-goods {
+    position: relative;
+    z-index: 150;
+
     background-image:
-        linear-gradient(to right, #ebebeb 466px, transparent 466px),
+        linear-gradient(to right, #ebebeb 591px, transparent 591px),
         linear-gradient(to bottom, #ebebeb 70px, transparent 70px);
 }
 
@@ -714,6 +736,7 @@ a {
 
 .filter h2 {
     margin-bottom: 100px;
+    padding-left: 60px;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 16px;
@@ -739,10 +762,21 @@ a {
 .filter-section {
     margin-bottom: 40px;
     padding: 0;
+    padding-left: 60px;
+
     border: none;
 }
 
+.btn-filter {
+    width: 200px;
+    margin-left: 50px;
+}
+
 /* ----- sorting section styles ----- */
+
+.goods-wrapper {
+    padding: 0;
+}
 
 .goods-sort {
     padding: 0;
@@ -759,7 +793,7 @@ a {
 .sort-wrapper {
     display: flex;
     align-items: baseline;
-    padding-left: 72px;
+    padding-left: 122px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -785,25 +819,21 @@ a {
 
 /* ----- catalog section styles ----- */
 
-.catalog {
-    padding-left: 72px;
-    background-color: #ffffff;
-    z-index: 100;
-}
-
 .list-items {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 0;
+    margin-left: 122px;
 
     list-style: none;
 }
 
 .item {
     position: relative;
-
-    margin-right: 40px;
+    margin-right: 0;
 }
+
 
 .item-info {
     display: flex;
@@ -871,8 +901,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 20px 25px;
-    margin-left: 70px;
-    margin-right: 40px;
+    margin-left: 122px;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 16px;
