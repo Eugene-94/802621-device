@@ -259,13 +259,13 @@ img {
     margin-right: 15px;
 }
 
-.main-nav-item:nth-of-type(1) {
+.main-nav-item:nth-of-type(1)  {
     position: relative;
 
     padding-right: 30px;
 }
 
-.main-nav-item:nth-of-type(1)::after {
+.dropdown-menu.main-nav-item::after {
     content: "";
 
     position: absolute;
@@ -547,7 +547,7 @@ img {
 }
 
 .slider-image {
-    position: relative;
+    z-index: 100;
 
     width: 50%;
     padding-left: 91px;
@@ -1180,7 +1180,7 @@ img {
 
 .phone {
     display: block;
-    margin-bottom: 105px;
+    margin-bottom: 61px;
 
     color: #ffffff;
 }
@@ -1289,14 +1289,18 @@ img {
 
 .copyright {
     position: relative;
-    margin-bottom: 2px;
+
+    display: block;
+    width: 27px;
+    height: 35px;
+    margin-bottom: 10px;
 }
 
-.copyright a::after {
+.copyright::after {
     content: "";
 
     position: absolute;
-    bottom: 7px;
+    bottom: 0;
     right: 0;
 
     display: block;
@@ -1308,11 +1312,11 @@ img {
     cursor: pointer;
 }
 
-.copyright a:hover::after {
+.copyright:hover::after {
     opacity: 0.6;
 }
 
-.copyright a:active::after {
+.copyright:active::after {
     opacity: 0.3;
 }
 
@@ -1347,7 +1351,7 @@ img {
     width: 960px;
     padding-top: 90px;
     padding-left: 60px;
-    padding-right: 60px;
+    padding-right: 100px;
     padding-bottom: 80px;
 
     background-color: #ffffff;
@@ -1356,9 +1360,19 @@ img {
 
 .name-mail {
     display: flex;
-    justify-content: space-between;
 
     margin-bottom: 35px;
+}
+
+.name-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.email-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-write-us label {
@@ -1466,8 +1480,8 @@ img {
 .catalog-top {
     position: relative;
 
-    margin-top: 13px;
-    margin-bottom: 35px;
+    margin-top: 15px;
+    margin-bottom: 33px;
     border: 1px solid transparent;
 }
 
@@ -1488,10 +1502,43 @@ img {
 
     list-style: none;
 }
-/* убрал дублирование с breadcrumbs*/
 
 .breadcrumbs li {
-    margin-right: 40px;
+    position: relative;
+}
+
+.breadcrumbs li:not(:first-child) {
+    padding-left: 40px;
+}
+
+.breadcrumbs li:nth-child(2)::before {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    box-shadow: -1px 1px 0 0 #000000;
+    transform: rotate(-135deg);
+}
+
+.breadcrumbs li:nth-child(3)::before {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    box-shadow: -1px 1px 0 0 #000000;
+    transform: rotate(-135deg);
 }
 
 .breadcrumbs-link {
@@ -1504,7 +1551,7 @@ img {
 .filter {
     z-index: 150;
 
-    padding-top: 10px;
+    padding-top: 62px;
 
     width: 28.2759%;
 }
@@ -1514,8 +1561,7 @@ img {
     z-index: 150;
 
     background-image:
-        linear-gradient(to right, #eeeeee calc((100% - 1194px + 2px)/2), transparent calc((100% - 1194px + 2px)/2)),
-        linear-gradient(to bottom, #ebebeb 70px, transparent 70px);
+        linear-gradient(to right, #eeeeee calc((100% - 1194px + 2px)/2), transparent calc((100% - 1194px + 2px)/2));
 }
 
 .filter-and-goods .container {
@@ -1525,9 +1571,79 @@ img {
     background-image: linear-gradient(to right, #eeeeee 350px, transparent 350px);
 }
 
+.filter-sorting {
+    background-image: linear-gradient(to right, #dbdbdb calc((100% - 1200px + 2px)/2), #ebebeb calc((100% - 1200px + 2px)/2));
+}
+
+.filter-sorting-container {
+    display: flex;
+    padding: 0;
+
+    background-image: linear-gradient(to right, #dbdbdb 350px, transparent 350px);
+}
+
+.filter-title {
+    display: block;
+    width: 28.5%;
+    padding-left: 81px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    word-wrap: break-word;
+}
+
+.goods-sort {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.sort-link {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.sort-wrapper {
+    z-index: 150;
+
+    display: flex;
+    align-items: baseline;
+    width: 71.5%;
+    padding-left: 79px;
+    padding-top: 19px;
+}
+
+.sort-header {
+    max-width: 300px;
+    margin-right: 53px;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    word-wrap: break-word;
+}
+
+.goods-sort {
+    display: flex;
+}
+
+.goods-sort li {
+    margin-right: 30px;
+}
+/*
 .filter h2 {
     display: block;
-    max-width: 240px;
+    max-width: 260px;
     margin-bottom: 85px;
     padding-left: 60px;
 
@@ -1538,7 +1654,8 @@ img {
     text-transform: uppercase;
     letter-spacing: 3.5px;
     word-wrap: break-word;
-}
+    outline: 1px solid black;
+}*/
 
 .filter-legend {
     position: relative;
@@ -1627,15 +1744,31 @@ img {
 
 .range-toggle {
     position: absolute;
-    top: -9px;
+    top: -7px;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -2px;
 
     width: 4px;
     height: 4px;
 
     background-color: #ababab;
     border: 8px solid #ffffff;
-    border-radius: 50%;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -1675,53 +1808,7 @@ img {
     padding: 0;
 }
 
-.goods-sort {
-    padding: 0;
-    margin: 0;
 
-    list-style: none;
-}
-
-.sort-link {
-    font-size: 14px;
-    line-height: 18px;
-}
-
-.sort-wrapper {
-    z-index: -10;
-
-    display: flex;
-    align-items: baseline;
-
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 70px;
-    margin-bottom: 30px;
-
-    box-shadow: -600px 0 0 0 #dbdbdb;
-}
-
-.sort-header {
-    max-width: 300px;
-    margin-right: 50px;
-    padding-left: 6px;
-
-    font-family: Gilroy, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    text-transform: uppercase;
-    letter-spacing: 3.5px;
-    word-wrap: break-word;
-}
-
-.goods-sort {
-    display: flex;
-}
-
-.goods-sort li {
-    margin-right: 30px;
-}
 
 /* ----- catalog section styles ----- */
 
@@ -1730,7 +1817,7 @@ img {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0;
-    padding-top: 40px;
+    padding-top: 55px;
     padding-left: 70px;
     padding-bottom: 0;
 
