@@ -8,7 +8,7 @@
     </head>
     <body>
         <header class="container main-header">
-            <a href="index.html" class="main-header-logo">
+            <a class="main-header-logo" href="index.html">
               <img src="img/logo.png" width="163" height="36" alt="Логотип магазина Device">
             </a>
             <div class="header-wrapper">
@@ -89,7 +89,7 @@
 
             <div class="filter-sorting">
                 <div class="filter-sorting-container container">
-                    <p class="filter-title">Фильтр:</p>
+                    <p class="filter-title" aria-hidden="true">Фильтр:</p>
                     <div class="sort-wrapper">
                         <span class="sort-header">Сортировка:</span>
                         <ul class="goods-sort">
@@ -110,7 +110,7 @@
             <div class="filter-and-goods">
                 <div class="container">
                     <section class="filter">
-                        <h2 class="visually-hidden">Фильтр товаров</h2>
+                        <h2 class="visually-hidden">Фильтр</h2>
                         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
                             <fieldset class="filter-section">
                                 <legend class="filter-legend">Стоимость</legend>
@@ -118,10 +118,18 @@
                                     <div class="scale">
                                         <div class="bar"></div>
                                     </div>
-                                    <input class="range-toggle range-toggle-min" id="toggle-min" type="radio">
-                                    <input class="range-toggle range-toggle-max" id="toggle-max" type="radio">
-                                    <label class="range-cost cost-min" for="toggle-min">от 0</label>
-                                    <label class="range-cost cost-max" for="toggle-max">до 5000</label>
+                                    <div class="range-toggle range-toggle-min"></div>
+                                    <div class="range-toggle range-toggle-max"></div>
+
+                                        <label class="price-control price-min" for="input-min">
+                                            от <input class="range-cost cost-min" id="input-min" type="text" value="0">
+                                        </label>
+
+                                        <label class="price-control price-max" for="input-max">
+                                            до <input class="range-cost cost-max" id="input-max" type="text" value="5000">
+                                        </label>
+
+
                                  </div>
                             </fieldset>
 
