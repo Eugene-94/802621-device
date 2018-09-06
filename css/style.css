@@ -1360,6 +1360,7 @@ img {
     top: 50%;
     transform: translate(-50%, -50%);
 
+    display: none;
     width: 960px;
     padding-top: 90px;
     padding-left: 60px;
@@ -1368,6 +1369,32 @@ img {
 
     background-color: #ffffff;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-map {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+    width: 960px;
+    height: 560px;
+
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-write-us.active-modal {
+    display: block;
+}
+
+.modal-map.active-modal {
+    display: block;
+}
+
+.close-modal.active-modal {
+    display: block;
 }
 
 .name-mail {
@@ -1419,15 +1446,22 @@ img {
 
 .modal-write-us .name-form:hover,
 .modal-write-us .email-form:hover,
-.modal-write-us .email-form:hover {
+.modal-write-us .message-form:hover {
     background-color: #eaeaea;
 }
 
 .modal-write-us .name-form:focus,
 .modal-write-us .email-form:focus,
-.modal-write-us .email-form:focus {
+.modal-write-us .message-form:focus {
     background-color: #ffffff;
     outline: 2px solid #f7e296;
+}
+
+.name-form.invalid,
+.email-form.invalid,
+.message-form.invalid {
+    background-color: #f6dada;
+    outline: none;
 }
 
 .close-modal {
@@ -1435,6 +1469,7 @@ img {
     top: 23px;
     right: 23px;
 
+    display: none;
     width: 60px;
     height: 60px;
     border: none;
@@ -1482,23 +1517,20 @@ img {
     transform: rotate(45deg);
 }
 
-.modal-write-us,
-.modal-map {
-    display: none;
-}
 
 /* ----- catalog page styles ----- */
 
 .catalog-top {
     position: relative;
 
-    margin-top: 15px;
-    margin-bottom: 33px;
+    margin-top: 12px;
+    margin-bottom: 31px;
     border: 1px solid transparent;
 }
 
 .catalog-top .title {
     padding-left: 60px;
+    margin-bottom: 34px;
 
     letter-spacing: 0.5px;
 }
@@ -1523,7 +1555,7 @@ img {
     padding-left: 40px;
 }
 
-.breadcrumbs li:nth-child(2)::before {
+.breadcrumbs li:not(:first-child)::before {
     content: "";
 
     position: absolute;
@@ -1533,11 +1565,13 @@ img {
     display: block;
     width: 6px;
     height: 6px;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
 
-    box-shadow: -1px 1px 0 0 #000000;
-    transform: rotate(-135deg);
+    transform: rotate(-45deg);
 }
 
+/*
 .breadcrumbs li:nth-child(3)::before {
     content: "";
 
@@ -1552,6 +1586,7 @@ img {
     box-shadow: -1px 1px 0 0 #000000;
     transform: rotate(-135deg);
 }
+*/
 
 .breadcrumbs-link {
     color: inherit;
@@ -1623,6 +1658,7 @@ img {
 }
 
 .sort-wrapper {
+    position: relative;
     z-index: 150;
 
     display: flex;
@@ -1651,6 +1687,30 @@ img {
 
 .goods-sort li {
     margin-right: 30px;
+}
+
+.sort-types {
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.sort-type {
+    border: none;
+
+    background-color: transparent;
+    opacity: 0.2;
+}
+
+.sort-type:hover {
+    opacity: 0.4;
+}
+
+.sort-type:active {
+    opacity: 1;
+}
+
+.sort-down {
+    transform: rotate(180deg) translateY(-2px);
 }
 /*
 .filter h2 {
@@ -1690,6 +1750,8 @@ img {
 
     background-color: #000000;
 }
+
+
 
 .filter label {
     font-size: 14px;
@@ -1804,14 +1866,89 @@ img {
     border: none;
 }
 
+.select-color + label {
+    position: relative;
+
+    padding-left: 37px;
+
+    cursor: pointer;
+}
+
+.select-color + label::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -3px;
+
+    width: 19px;
+    height: 19px;
+    border: 2px solid #000000;
+
+    border-radius: 4px;
+}
+
+.select-color:checked + label::before {
+    border: none;
+}
+
+.select-color:checked + label::after {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -3px;
+
+    width: 28px;
+    height: 28px;
+
+    background-image: url("../img/checkbox-on.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.is-bluetooth + label {
+    position: relative;
+
+    padding-left: 37px;
+
+    cursor: pointer;
+}
+
+.is-bluetooth + label::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: -5px;
+
+    width: 19px;
+    height: 19px;
+    border: 4px solid #000000;
+
+    border-radius: 50%;
+}
+
+.is-bluetooth:checked + label::after {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #000000;
+    border-radius: 50%;
+}
+
 /* ----- sorting section styles ----- */
 
 .goods-wrapper {
     width: 71.5%;
     padding: 0;
 }
-
-
 
 /* ----- catalog section styles ----- */
 
@@ -1831,16 +1968,48 @@ img {
     margin-bottom: 0;
 }
 
-.item:not(:nth-of-type(3)),
-.item:not(:nth-of-type(4)) {
+.item {
     position: relative;
+
+}
+
+.catalog-item {
     margin-right: 0;
-    margin-bottom: 38px;
+    padding-bottom: 38px;
+}
+
+.catalog-item:nth-last-of-type(1),
+.catalog-item:nth-last-of-type(2) {
+    padding-bottom: 31px;
 }
 
 .item:nth-of-type(3) .item-info,
 .item:nth-of-type(4) .item-info {
     padding-bottom: 0;
+}
+
+.item.new::after {
+    content: "new";
+
+    position: absolute;
+    top: 30px;
+    right: 27px;
+
+    display: block;
+    width: 56px;
+    height: 56px;
+    border: 2px solid #000000;
+
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: #000000;
+    text-align: center;
+    line-height: 56px;
+    text-transform: uppercase;
+
+    border-radius: 50%;
+    opacity: 0.2;
 }
 
 .item-info {
@@ -1889,6 +2058,7 @@ img {
 
     margin: 0;
     margin-bottom: 20px;
+
 }
 
 .item-hover {
@@ -1934,10 +2104,12 @@ img {
 .pagination {
     display: flex;
     justify-content: space-between;
-    padding: 20px 29px;
+    padding: 0;
+    /*padding: 20px 29px;*/
     margin-left: 70px;
     margin-top: 0;
     margin-bottom: 77px;
+    padding-left: 0;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 16px;
@@ -1964,11 +2136,52 @@ img {
 }
 
 .page-number:not(:last-of-type) {
-    margin-right: 15px;
+    margin-right: 11px;
+}
+
+.page-number {
+    margin-top: 22px;
+    opacity: 0.3;
+}
+
+.page-number:hover {
+    opacity: 0.6;
+}
+
+.page-number.current-page {
+    opacity: 1;
+}
+
+.link-back,
+.link-forward {
+    display: block;
+    width: 126px;
+    height: 70px;
+
+    text-align: center;
+    line-height: 70px;
+}
+
+.link-back {
+    margin-left: auto;
+}
+
+.link-forward {
+    margin-right: auto;
+}
+
+.link-back:hover,
+.link-forward:hover {
+    background-color: #d9d9d9;
+}
+
+.link-back:active,
+.link-forward:active {
+    opacity: 0.3;
 }
 
 .page-back {
-    margin-right: 235px;
+    margin-right: 197px;
 }
 
 .page-forward {

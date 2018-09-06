@@ -103,6 +103,14 @@
                                 <a class="sort-link" href="#">По популярности</a>
                             </li>
                         </ul>
+                        <div class="sort-types">
+                            <button class="sort-type sort-up" type="button">
+                                <img src="img/icon-up-dir.svg">
+                            </button>
+                            <button class="sort-type sort-down" type="button">
+                                <img src="img/icon-up-dir.svg">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,28 +143,28 @@
 
                             <fieldset class="filter-section">
                                 <legend class="filter-legend">Цвет</legend>
-                                <input class="select-color" id="select-black" type="checkbox" name="color" value="black" >
+                                <input class="visually-hidden select-color" id="select-black" type="checkbox" name="color" value="black" checked>
                                 <label class="filter-label" for="select-black" >Черный</label><br>
 
-                                <input class="select-color" id="select-white" type="checkbox" name="color" value="white">
+                                <input class="visually-hidden select-color" id="select-white" type="checkbox" name="color" value="white" >
                                 <label class="filter-label" for="select-white">Белый</label><br>
 
-                                <input class="select-color" id="select-blue" type="checkbox" name="color" value="blue">
+                                <input class="visually-hidden select-color" id="select-blue" type="checkbox" name="color" value="blue" checked>
                                 <label class="filter-label" for="select-blue">Синий</label><br>
 
-                                <input class="select-color" id="select-red" type="checkbox" name="color" value="red">
+                                <input class="visually-hidden select-color" id="select-red" type="checkbox" name="color" value="red" checked>
                                 <label class="filter-label" for="select-red" >Красный</label><br>
 
-                                <input class="select-color" id="select-pink" type="checkbox" name="color" value="pink">
+                                <input class="visually-hidden select-color" id="select-pink" type="checkbox" name="color" value="pink">
                                 <label class="filter-label" for="select-pink" >Розовый</label>
                             </fieldset>
 
                             <fieldset class="filter-section">
                                 <legend class="filter-legend">Bluetooth</legend>
-                                <input class="is-bluetooth" id="true" type="radio" name="isBluetooth" value="true">
+                                <input class="visually-hidden is-bluetooth" id="true" type="radio" name="isBluetooth" value="true" checked>
                                 <label for="true" class="filter-label">Есть</label><br>
 
-                                <input class="is-bluetooth" id="false" type="radio" name="isBluetooth" value="false">
+                                <input class="visually-hidden is-bluetooth" id="false" type="radio" name="isBluetooth" value="false">
                                 <label class="filter-label" for="false">Нет</label>
                             </fieldset>
 
@@ -170,7 +178,7 @@
                         <section class="catalog">
                             <h2 class="visually-hidden">Список моноподов</h2>
                             <ul class="list-items">
-                                <li>
+                                <li class="catalog-item">
                                     <div class="item">
                                             <div class="item-image">
                                                 <img class="item-img" src="img/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
@@ -187,7 +195,7 @@
                                             </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="catalog-item">
                                     <div class="item">
                                             <div class="item-image">
                                                 <img src="img/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
@@ -204,7 +212,7 @@
                                             </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="catalog-item">
                                     <div class="item">
                                             <div class="item-image">
                                                 <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
@@ -221,8 +229,8 @@
                                             </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="item">
+                                <li class="catalog-item">
+                                    <div class="item new">
                                             <div class="item-image">
                                                 <img src="img/item-4.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
                                                 <div class="item-hover">
@@ -243,10 +251,10 @@
 
                         <ul class="pagination">
                             <li class="page-back">
-                                <a class="pagination-link active">Назад</a>
+                                <a class="pagination-link link-back active">Назад</a>
                             </li>
 
-                            <li class="page-number">
+                            <li class="page-number current-page">
                                 <a class="pagination-link active">1</a>
                             </li>
                             <li class="page-number">
@@ -257,7 +265,7 @@
                             </li>
 
                             <li class="page-forward">
-                                <a class="pagination-link active" href="#">Вперед</a>
+                                <a class="pagination-link link-forward active" href="#">Вперед</a>
                             </li>
                         </ul>
                     </div>
@@ -365,5 +373,6 @@
                 </div>
             </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 </html>

@@ -144,11 +144,11 @@
                 </div>
 
                 <div class="toggles">
-                    <input id="slide-1" type="radio" name="slide-toggle" checked>
+                    <input class="slide-toggle" id="slide-1" type="radio" name="slide-toggle" checked>
                     <label for="slide-1">Радио-кнопка переключения на слайд 1</label>
-                    <input id="slide-2" type="radio" name="slide-toggle">
+                    <input class="slide-toggle" id="slide-2" type="radio" name="slide-toggle">
                     <label for="slide-2">Радио-кнопка переключения на слайд 2</label>
-                    <input id="slide-3" type="radio" name="slide-toggle">
+                    <input class="slide-toggle" id="slide-3" type="radio" name="slide-toggle">
                     <label for="slide-3">Радио-кнопка переключения на слайд 3</label>
                 </div>
             </section>
@@ -289,9 +289,9 @@
                     <h2 class="title">Контакты</h2>
                     <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
                     <div class="map">
-                        <img src="img/map.jpg" alt="Мы на карте" width="560" height="222">
+                        <img class="map-image" src="img/map.jpg" alt="Мы на карте" width="560" height="222">
                     </div>
-                    <a class="btn-link" href="#">Напишите нам</a>
+                    <a class="btn-link write-us-btn" href="#">Напишите нам</a>
                 </section>
             </div>
         </main>
@@ -401,25 +401,25 @@
         <section class="modal modal-write-us">
 
                 <h2 class="visually-hidden">Напишите нам</h2>
-                <form action="https://echo.htmlacademy.ru" method="post" class="write-us-form">
+                <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
                     <div class="name-mail">
                         <div class="name-wrapper">
                             <label for="username">Ваше имя:</label>
-                            <input class="name-form" id="username" type="text" name="username" placeholder="Имя Фамилия">
+                            <input class="form-item name-form" id="username" type="text" name="username" placeholder="Имя Фамилия">
                         </div>
 
                         <div class="email-wrapper">
                             <label for="email">Ваш e-mail:</label>
-                            <input class="email-form" id="email" type="email" name="email" placeholder="email@example.ru">
+                            <input class="form-item email-form" id="email" type="email" name="email" placeholder="email@example.ru">
                         </div>
                     </div>
 
                     <label for="message">Текст письма:</label>
-                    <textarea class="message-form" id="message" name="message" placeholder="В свободной форме"></textarea>
+                    <textarea class="form-item message-form" id="message" name="message" placeholder="В свободной форме"></textarea>
 
                     <button class="btn-link" type="submit">Отправить</button>
                 </form>
-                <button class="close-modal" type="button">
+                <button class="close-modal write-us-close-modal" type="button">
                     <span class="visually-hidden">Закрыть окно</span>
                 </button>
 
@@ -427,7 +427,12 @@
 
         <section class="modal modal-map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
-            <button class="close-modal" type="button">Закрыть окно</button>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112374947342!2d37.52742931573114!3d55.687034004530254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1536240573710"
+            width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <button class="close-modal map-close-modal" type="button">
+                <span class="visually-hidden">Закрыть окно</span>
+            </button>
         </section>
+        <script src="js/script.js"></script>
     </body>
 </html>
