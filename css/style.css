@@ -36,6 +36,15 @@
         url('../fonts/gilroyextrabold.woff') format('woff');
 }
 
+@keyframes show-popup {
+    0% {transform: translate(-1000%, -50%);}
+
+    65% {transform: translate(10px, -50%);}
+    75% {transform: translate(-5px, -50%);}
+
+    100% {transform: translate(-50%, -50%);}
+}
+
 /* Colors
 
 paragraphs text: #464646;
@@ -45,11 +54,12 @@ header background: #f7e296;
 
 /* ----- common styles ----- */
 
-* {
-    box-sizing: border-box;
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 
@@ -473,7 +483,8 @@ img {
     position: relative;
 }
 
-.dropdown-menu:hover .catalog-dropdown {
+.dropdown-menu:hover .catalog-dropdown,
+.dropdown-menu:focus .catalog-dropdown {
     display: flex;
     flex-wrap: wrap;
     z-index: 500;
@@ -603,8 +614,10 @@ img {
     letter-spacing: 0.2px;
 }
 
-.slider .btn-link {
+.slider-btn {
     margin-bottom: 49px;
+
+    letter-spacing: 4.5px;
 }
 
 .slider-wrapper table {
@@ -636,14 +649,44 @@ img {
     width: 85px;
 }
 
+/*
 .toggles input:not(:last-of-type) {
     margin-right: 17px;
 }
 
+*/
+
 .toggles label {
-    display: none;
+    box-sizing: content-box;
+    position: relative;
+
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #000000;
+    vertical-align: baseline;
+
+    background-color: transparent;
+    border-radius: 50%;
 }
-/* Понял косяк, slider a больше не дублирую.
+
+.toggles label:not(:last-child) {
+    margin-right: 16px;
+}
+
+.slide-toggle:checked + label::after {
+    content: "";
+
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+
+    width: 4px;
+    height: 4px;
+    border: 1px solid #000000;
+
+    border-radius: 50%;
+}
 
 /* ----- goods categories section styles ----- */
 .categories {
@@ -660,6 +703,7 @@ img {
 
 .goods-link {
     display: inline-block;
+    vertical-align: baseline;
     width: 160px;
     position: relative;
 
@@ -1405,8 +1449,10 @@ img {
 
 .modal-write-us {
     position: fixed;
+
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
 
     display: none;
@@ -1422,6 +1468,7 @@ img {
 
 .modal-map {
     position: fixed;
+
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -1434,8 +1481,10 @@ img {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.modal-write-us.active-modal {
+.active-modal {
     display: block;
+
+    animation: show-popup .8s;
 }
 
 .modal-map.active-modal {
