@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Девайс</title>
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/style.min.css" rel="stylesheet">
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     </head>
     <body>
         <header class="container main-header">
@@ -97,7 +98,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="slides slide-2">
+                <div class="slides slide-2 " >
                     <div class="slider-image">
                         <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
                     </div>
@@ -119,21 +120,21 @@
                         </table>
                     </div>
                 </div>
-                <div class="slides slide-3">
+                <div class="slides slide-3 ">
                     <div class="slider-image">
                         <img src="img/slider-3.png" alt="Дрон" width="526" height="334">
                     </div>
 
                     <div class="slider-wrapper">
-                        <h3 class="title">Порхает как бабочка, <br> жалит как пчела!</h3>
-                        <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
-                            не пропускать занятия и соблюдать диету.
+                        <h3 class="title">Порхает как бабочка, жалит как пчела!</h3>
+                        <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
+                        мощным лазером, замаскированным под стандартную камеру.
                         </p>
                         <span class="slide-number">03</span>
                         <a class="btn-link slider-btn" href="#">Подробнее</a>
                         <table>
                             <tr>
-                                <td>800 метров</td><td>50 метров</td>
+                                <td>800 м</td><td>50 м</td>
                             </tr>
                             <tr>
                                 <th>Дальность полета</th><th>Радиус поражения</th>
@@ -143,20 +144,15 @@
                 </div>
 
                 <div class="toggles">
-                    <input class="visually-hidden slide-toggle" id="slide-1" type="radio" name="slide-toggle" checked>
-                    <label for="slide-1">
-                        <span class="visually-hidden">Радио-кнопка переключения на слайд 1</span>
-                    </label>
-
-                    <input class="visually-hidden slide-toggle" id="slide-2" type="radio" name="slide-toggle">
-                    <label for="slide-2">
-                        <span class="visually-hidden">Радио-кнопка переключения на слайд 2</span>
-                    </label>
-
-                    <input class="visually-hidden slide-toggle" id="slide-3" type="radio" name="slide-toggle">
-                    <label for="slide-3">
-                        <span class="visually-hidden">Радио-кнопка переключения на слайд 3</span>
-                    </label>
+                    <button class="slide-toggle toggle-active" type="button">
+                        <span class="visually-hidden">Кнопка переключения на слайд 1</span>
+                    </button>
+                    <button class="slide-toggle" type="button">
+                        <span class="visually-hidden">Кнопка переключения на слайд 2</span>
+                    </button>
+                    <button class="slide-toggle" type="button">
+                        <span class="visually-hidden">Кнопка переключения на слайд 3</span>
+                    </button>
                 </div>
             </section>
 
@@ -199,11 +195,11 @@
                 <div class="info-wrapper container">
                     <div class="info-selectors-wrapper">
                         <h2 class="visually-hidden">Информационный раздел</h2>
-                        <input id="delivery" type="radio" name="info-selector" checked>
-                        <label class="delivery-label active-info" for="delivery">Доставка</label>
-                        <input id="warranty" type="radio" name="info-selector">
+                        <input class="info-selector info-delivery" id="delivery" type="radio" name="info-selector" checked>
+                        <label class="delivery-label active-label" for="delivery">Доставка</label>
+                        <input class="info-selector info-warranty" id="warranty" type="radio" name="info-selector">
                         <label class="warranty-label" for="warranty">Гарантия</label>
-                        <input id="credit" type="radio" name="info-selector">
+                        <input class="info-selector info-credit" id="credit" type="radio" name="info-selector">
                         <label class="credit-label" for="credit">Кредит</label>
                     </div>
 
@@ -217,7 +213,7 @@
                          </div>
                          <div class="info-items info-2">
                              <h3 class="title">Гарантия</h3>
-                             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br>
                                 Товар, не дом, конечно же.
                             </p>
                          </div>
@@ -366,14 +362,16 @@
 
         </section>
 
-        <section class="modal modal-map">
+        <section class="modal modal-map" id="map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
+
+            <!--
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112374947342!2d37.52742931573114!3d55.687034004530254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1536240573710"
-            width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+            width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe> 55.686980, 37.529654 -->
             <button class="close-modal map-close-modal" type="button">
                 <span class="visually-hidden">Закрыть окно</span>
             </button>
         </section>
-        <script src="js/script.js"></script>
+        <script src="js/script.min.js"></script>
     </body>
 </html>
