@@ -6,6 +6,13 @@ var closeModal = document.querySelector('.write-us-close-modal'); //доступ
 var writeUsForm = document.querySelector('.write-us-form'); //доступ к форме
 var formItems = writeUsForm.querySelectorAll('.form-item'); //доступ к полям формы
 
+var buttons = document.querySelectorAll('.slide-toggle'); //доступ к кнопкам слайдера
+var slides =  document.querySelectorAll('.slides'); //доступ к слайдам
+
+var openMap = document.querySelector('.map'); //доступ к карте
+var mapModal = document.querySelector('.modal-map'); //доступ к модальнику карты
+var closeMap = mapModal.querySelector('.close-modal'); //доступ к кнопке закрытия карты
+
 writeUsButton.addEventListener('click', function(evt) { //открываем окно по клику
     evt.preventDefault();
     writeUsModal.classList.add('active-modal');
@@ -16,12 +23,22 @@ closeModal.addEventListener('click', function(evt) { //закрываем окн
     evt.preventDefault();
     writeUsModal.classList.remove('active-modal');
     closeModal.classList.remove('active-modal');
+
+    for (var i = 0; i < formItems.length; i++) {
+        if (formItems[i].classList.contains('invalid')) {
+            formItems[i].classList.remove('invalid');
+        }
+    }
+
+    writeUsModal.classList.remove('modal-error');
 });
 
 writeUsForm.addEventListener('submit', function(evt) { //валидация формы
     for (var i = 0; i < formItems.length; i++) {
         if (!formItems[i].value) {
             evt.preventDefault();
+            writeUsModal.classList.remove("modal-error");
+            writeUsModal.offsetWidth = writeUsModal.offsetWidth;
             formItems[i].classList.add('invalid');
             writeUsModal.classList.add('modal-error');
         } else {
@@ -31,7 +48,7 @@ writeUsForm.addEventListener('submit', function(evt) { //валидация фо
     }
 });
 
-window.addEventListener('keydown', function(evt) {
+window.addEventListener('keydown', function(evt) { //реализовываем закрытие через esc
     if (evt.keyCode === 27) {
       evt.preventDefault();
       if (writeUsModal.classList.contains('active-modal')) {
@@ -39,10 +56,6 @@ window.addEventListener('keydown', function(evt) {
       }
     }
 });
-
-var openMap = document.querySelector('.map');
-var mapModal = document.querySelector('.modal-map');
-var closeMap = mapModal.querySelector('.close-modal');
 
 openMap.addEventListener('click', function(evt) { //открываем окно по клику
     evt.preventDefault();
@@ -68,7 +81,7 @@ window.addEventListener('keydown', function(evt) {
 // Встраиваем карту при помощи API Яндекс
 
 ymaps.ready(init);
-    function init(){
+function init(){
         // Создание карты.
         var myMap = new ymaps.Map("map", {
             // Координаты центра карты.
@@ -91,17 +104,15 @@ ymaps.ready(init);
         // После того как метка была создана, ее
         // можно добавить на карту.
         myMap.geoObjects.add(myPlacemark);
-    };
+};
 
 // Оживляем слайдер
-var buttons = document.querySelectorAll('.slide-toggle');
-var slides =  document.querySelectorAll('.slides');
 
-var buttonClickHandler = function (e) {
+var buttonClickHandler = function (evt) {
 	var buttonActive = document.querySelector('.toggle-active');
 
-	if (!e.target.classList.contains('toggle-active')) {
-  	e.target.classList.add('toggle-active');
+	if (!evt.target.classList.contains('toggle-active')) {
+  	evt.target.classList.add('toggle-active');
     buttonActive.classList.remove('toggle-active');
 
     for (var j = 0; j < slides.length; j++) {
@@ -120,21 +131,20 @@ for (var i = 0; i < buttons.length; i++) {
 
 // Оживляем инфо блок
 
-var selectors = document.querySelectorAll('.info-selector');
-var infoBlocks = document.querySelectorAll('.info-items');
-var infoSection = document.querySelector('.info');
-var infoLabels = infoSection.querySelectorAll('label');
+var infoSelectors = document.querySelectorAll('.info-selector'); // доступ к кнопкам инфо
+var infoBlocks = document.querySelectorAll('.info-items'); // доступ к инфо разделам
+var infoSection = document.querySelector('.info'); // доступ к инфо секции
 
-var changeInfo = function(e) {
-    var activeLabel = infoSection.querySelector('.active-label');
+var changeInfo = function(evt) {
+    var activeSelector = infoSection.querySelector('.active-info-selector');
 
-    if (!e.target.classList.contains('active-label')) {
-        e.target.classList.add('active-label');
-        activeLabel.classList.remove('active-label');
+    if (!evt.target.classList.contains('active-info-selector')) {
+        evt.target.classList.add('active-info-selector');
+        activeSelector.classList.remove('active-info-selector');
     }
 
     for (var i = 0; i < infoBlocks.length; i++) {
-        if (infoLabels[i].classList.contains('active-label')) {
+        if (infoSelectors[i].classList.contains('active-info-selector')) {
             infoBlocks[i].classList.add('active-info');
         } else {
             infoBlocks[i].classList.remove('active-info');
@@ -142,6 +152,6 @@ var changeInfo = function(e) {
     }
 }
 
-for (var i = 0; i < infoLabels.length; i++) {
-	infoLabels[i].addEventListener('click', changeInfo);
+for (var i = 0; i < infoSelectors.length; i++) {
+	infoSelectors[i].addEventListener('click', changeInfo);
 }

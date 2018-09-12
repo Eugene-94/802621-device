@@ -4,8 +4,7 @@
         <meta charset="utf-8">
         <title>Девайс</title>
         <link href="css/normalize.min.css" rel="stylesheet">
-        <link href="css/style.min.css" rel="stylesheet">
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="container main-header">
@@ -98,7 +97,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="slides slide-2 " >
+                <div class="slides slide-2">
                     <div class="slider-image">
                         <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
                     </div>
@@ -120,7 +119,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="slides slide-3 ">
+                <div class="slides slide-3">
                     <div class="slider-image">
                         <img src="img/slider-3.png" alt="Дрон" width="526" height="334">
                     </div>
@@ -195,12 +194,9 @@
                 <div class="info-wrapper container">
                     <div class="info-selectors-wrapper">
                         <h2 class="visually-hidden">Информационный раздел</h2>
-                        <input class="info-selector info-delivery" id="delivery" type="radio" name="info-selector" checked>
-                        <label class="delivery-label active-label" for="delivery">Доставка</label>
-                        <input class="info-selector info-warranty" id="warranty" type="radio" name="info-selector">
-                        <label class="warranty-label" for="warranty">Гарантия</label>
-                        <input class="info-selector info-credit" id="credit" type="radio" name="info-selector">
-                        <label class="credit-label" for="credit">Кредит</label>
+                        <button class="info-selector info-delivery active-info-selector" type="button">Доставка</button>
+                        <button class="info-selector info-warranty">Гарантия</button>
+                        <button class="info-selector info-credit">Кредит</button>
                     </div>
 
                     <div class="info-description-wrapper">
@@ -372,6 +368,7 @@
                 <span class="visually-hidden">Закрыть окно</span>
             </button>
         </section>
-        <script src="js/script.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

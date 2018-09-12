@@ -762,24 +762,6 @@ img {
 
 }
 
-/*
-.img-wrapper {
-    position: relative;
-    width: 160px;
-    height: 160px;
-}
-
-.img-wrapper img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-}
-
-*/
-
 .goods-link::before {
     content: "";
 
@@ -922,12 +904,13 @@ img {
     display: flex;
 }
 
-.info label {
+.info-selector {
     position: relative;
 
     display: block;
     width: 160px;
     margin-bottom: 25px;
+    border: none;
 
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
@@ -937,50 +920,37 @@ img {
     text-transform: uppercase;
     letter-spacing: 3.5px;
 
+    background-color: transparent;
     background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 
     cursor: pointer;
 }
 
-.info input:checked + label {
+.info-selector.active-info-selector {
     width: 278px;
     padding-left: 22px;
 
     text-align: left;
 }
 
-/*
-.info-selectors-wrapper::before {
-    content: "";
-
-    position: absolute;
-    top: -80px;
-    right: 115px;
-
-    width: 7px;
-    height: 137%;
-
-    background-color: #000000;
-}
-*/
-
-.info label:hover {
+.info-selector:hover {
     background-color: #f0c52e;
 }
 
-.info-delivery:checked ~ label[for="delivery"],
-.info-warranty:checked ~ label[for="warranty"],
-.info-credit:checked ~ label[for="credit"] {
+.info-delivery.active-info-selector,
+.info-warranty.active-info-selector,
+.info-credit.active-info-selector {
     color: #f0c52e;
 
     background-color: #000000;
     background-image: none;
 }
 
+/*
 .info input {
     display: none;
 }
-
+*/
 .info h3 {
     line-height: 48px;
 }
