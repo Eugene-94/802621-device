@@ -600,7 +600,7 @@ img {
     position: relative;
 
     margin-top: 0px;
-    margin-bottom: 99px;
+    margin-bottom: 95px;
 }
 
 .slides {
@@ -884,7 +884,7 @@ img {
 /* ----- info section styles -----*/
 
 .info {
-    margin-bottom: 95px;
+    margin-bottom: 91px;
     padding-bottom: 67px;
 
     background-image: -webkit-linear-gradient(top, transparent 100px, #e5e5e5 100px);
