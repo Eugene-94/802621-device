@@ -604,7 +604,7 @@ img {
     position: relative;
 
     margin-top: 0px;
-    margin-bottom: 103px;
+    margin-bottom: 88px;
 }
 
 .slides {
@@ -716,6 +716,15 @@ img {
     letter-spacing: 0.2px;
 }
 
+.slide-1 p {
+    width: 87%;
+}
+
+.slide-2 p,
+.slide-3 p {
+    width: 81%;
+}
+
 .slider-btn {
     margin-bottom: 49px;
 
@@ -724,6 +733,7 @@ img {
 
 .slider-wrapper table {
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .slider td {
@@ -755,7 +765,7 @@ img {
 .toggles {
     position: absolute;
     right: 94px;
-    top: 64.5%;
+    top: 63%;
 
     width: 85px;
 }
@@ -2049,6 +2059,8 @@ img {
 }
 
 .filter-section {
+    display: flex;
+    flex-direction: column;
     padding-left: 58px;
     margin-bottom: 0;
 
@@ -2190,7 +2202,7 @@ img {
     content: "";
 
     position: absolute;
-    top: -2px;
+    top: 7px;
     left: 0px;
 
     width: 19px;
@@ -2204,6 +2216,10 @@ img {
     opacity: 0.6;
 }
 
+.select-color:focus + label {
+    opacity: 0.6;
+}
+
 .select-color:checked + label::before {
     border: none;
 }
@@ -2212,7 +2228,7 @@ img {
     content: "";
 
     position: absolute;
-    top: -2px;
+    top: 7px;
     left: 0px;
 
     width: 28px;
@@ -2235,13 +2251,17 @@ img {
     cursor: pointer;
 }
 
+.is-bluetooth:focus + label {
+    opacity: 0.6;
+}
+
 .is-bluetooth + label::before {
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
     content: "";
 
     position: absolute;
-    top: -4px;
+    top: 6px;
     left: -2px;
 
     width: 19px;
@@ -2259,7 +2279,7 @@ img {
     content: "";
 
     position: absolute;
-    top: 5px;
+    top: 15.5px;
     left: 7.5px;
 
     width: 8px;
@@ -2486,14 +2506,21 @@ img {
 
 .page-number {
     margin-top: 22px;
+}
+
+.page-number .pagination-link {
     opacity: 0.3;
 }
 
-.page-number:hover {
+.page-number .pagination-link:hover {
     opacity: 0.6;
 }
 
-.page-number.current-page {
+.page-number .pagination-link:active {
+    opacity: 1;
+}
+
+.current-page .pagination-link {
     opacity: 1;
 }
 
